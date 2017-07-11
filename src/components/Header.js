@@ -3,7 +3,8 @@ import logoScout24 from './../images/scout24.png';
 import logoIS24 from './../images/is24.png';
 import logoAS24 from './../images/as24.png';
 import './Header.css'
-const Header = () =>
+
+const Header = () => (
   <div className="header">
     <div id="scoutmanager-header">
       <div className="resp-header blue">
@@ -24,4 +25,6 @@ const Header = () =>
       </div>
     </div>
   </div>
+);
+
 export default Header
