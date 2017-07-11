@@ -129,6 +129,12 @@ build/Release
 node_modules/
 jspm_packages/
 
+# testing
+/coverage
+
+# production
+/build
+
 # Typescript v1 declaration files
 typings/
 
