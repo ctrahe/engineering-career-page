@@ -1,0 +1,67 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: ''
+Parameters:
+  domainName:
+    Type: String
+    Description: Domain name
+
+Resources:
+  bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "|Ref|domainName"
+      WebsiteConfiguration:
+        ErrorDocument: index.html
+        IndexDocument: index.html
+
+  bucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref bucket
+      PolicyDocument:
+        Statement:
+        - Action:
+          - s3:GetObject
+          Effect: Allow
+          Principal: '*'
+          Resource:
+          - Fn::Sub: arn:aws:s3:::${bucket}/*
+          Sid: PublicReadGetObject
+        Version: '2012-10-17'
+
+  allowReadAccessToCompanyIP:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref bucket
+      PolicyDocument:
+        Id: allowAccess
+        Version: '2012-10-17'
+        Statement:
+        - Sid: "allowOffice"
+          Action:
+          - s3:GetObject
+          Effect: "Allow"
+          Resource:
+            Fn::Sub: arn:aws:s3:::${bucket}/*
+          Principal: "*"
+          Condition:
+            IpAddress:
+              aws:SourceIp: "195.178.101.64/27"
+        - Sid: "allowVPN"
+          Action:
+          - s3:GetObject
+          Effect: "Allow"
+          Resource:
+            Fn::Sub: arn:aws:s3:::${bucket}/*
+          Principal: "*"
+          Condition:
+            IpAddress:
+              aws:SourceIp: "92.42.224.116/32"
+
+Outputs:
+  URL:
+    Description: URL of the website
+    Value:
+      Fn::GetAtt:
+      - bucket
+      - WebsiteURL

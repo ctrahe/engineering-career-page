@@ -1,0 +1,9 @@
+region: eu-west-1
+tags:
+  segment: people
+  usecase: engineering-career-page
+stacks:
+  engineering-career-page-website-tuv:
+    template-url: templates/s3-bucket.yml
+    parameters:
+      domainName: engineering-tuv.scout24.com
