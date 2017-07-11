@@ -1,5 +1,5 @@
 import React from 'react';
-import './main.css';
+import './cover.css';
 
 const Cover = () => (
     <div className="cover-image" />
