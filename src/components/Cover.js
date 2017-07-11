@@ -1,8 +1,12 @@
 import React from 'react';
 import './cover.css';
+import SearchBar from "./SearchBar";
 
 const Cover = () => (
-    <div className="cover-image" />
+    <div>
+        <div className="cover-image"/>
+        <SearchBar/>
+    </div>
 );
 
 export default Cover;
