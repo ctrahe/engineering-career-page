@@ -1,0 +1,12 @@
+service:     "engineering-career-page"
+usecase:     "engineering-career-page"
+segment:     "people"
+vertical:    "is24"
+owner:       "people.team@scout24.com"
+team:        "people"
+criticality: "bronze"
+confidentiality: "company-internal"
+integrity: "non-critical"
+availability: "non-critical"
+data_protection_relevant: no
+repository_url: https://github.com/AutoScout24/engineering-career-page
