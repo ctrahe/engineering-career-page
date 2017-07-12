@@ -3,7 +3,7 @@ import './footer.css'
 
 
 const Footer = () =>
-  <footer className="main-footer" data-cms-qa="page-footer">
+  <footer className="grid one-whole main-footer" data-cms-qa="page-footer">
     <h6>Seiteninformationen</h6>
     <ul>
       <li>
