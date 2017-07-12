@@ -6,16 +6,6 @@ import JobAdEntry from './JobAdEntry';
 
 class JobList extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            jobAds: this.props.jobAds
-        }
-        this.state.jobAds.forEach(jobAd => {
-            console.log(jobAd.title);
-        });
-    }
-
     render() {
         return (
             <div className="jobs-container">
@@ -30,8 +20,8 @@ class JobList extends Component {
                     <strong>Location</strong>
                 </div>
                 <ul>
-                    {this.state.jobAds.map(function(jobAd, index){
-                        return <JobAdEntry jobAd={jobAd} />;
+                    {this.props.jobAds.map(function(jobAd, index){
+                        return <JobAdEntry jobAd={jobAd} key={index}/>;
                     })}
                 </ul>
             </div>

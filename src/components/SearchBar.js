@@ -10,17 +10,46 @@ class SearchBar extends Component {
         super(props);
         this.state = {
             showJobList: false,
-            jobAds: []
+            jobAds: [],
+            jobField: 'Software Engineer',
+            city: 'all'
 
         }
-        this.searchAllJobs = this.searchAllJobs.bind(this)
+        this.displayAllJobs = this.displayAllJobs.bind(this)
+        this.handleJobFieldChange = this.handleJobFieldChange.bind(this)
+        this.handleCityChange = this.handleCityChange.bind(this)
+        this.displayJobIn = this.displayJobIn.bind(this)
     }
 
-    searchAllJobs () {
+    displayAllJobs() {
         getEngineeringJobAds().then(jobs => {
-                this.setState({jobAds: jobs, showJobList: true});
+                this.setState({...this.state, showJobList: true, jobAds: jobs});
             }
         );
+    }
+
+    handleJobFieldChange(event) {
+        this.setState({...this.state, jobField: event.target.value})
+    }
+
+    handleCityChange(event) {
+        console.log(event.target.value);
+        this.setState({...this.state, city: event.target.value})
+    }
+
+    displayJobIn(jobField, city) {
+        getEngineeringJobAds().then(jobs => {
+
+            const jobAds = [...jobs].filter((job) =>
+                job.location.name.includes(city) &&
+                job.title.includes(jobField)
+            );
+
+            this.setState({
+                showJobList: true,
+                jobAds
+            });
+        });
     }
 
     render() {
@@ -30,22 +59,22 @@ class SearchBar extends Component {
                     <div className="grid-item palm-one-whole lap-one-third desk-one-third">
                       {/*<span>I am searching for:</span>*/}
                       <span>
-                        <input className="field" placeholder="Software developer"/>
+                        <input className="field" placeholder="Software developer" onChange={(event) => this.handleJobFieldChange(event)}/>
                       </span>
                     </div>
                     <div className="grid-item palm-one-whole lap-one-third desk-one-third">
                       {/*<span>in:</span>*/}
-                      <select className="field">
-                            <option selected value><Translate value="searchBar.cities.all"/></option>
+                      <select className="field" onChange={(event) => this.handleCityChange(event)} value={this.state.city}>
+                            <option selected value="all"><Translate value="searchBar.cities.all"/></option>
                             <option value="Berlin"><Translate value="searchBar.cities.berlin"/></option>
                             <option value="Munich"><Translate value="searchBar.cities.munich"/></option>
                         </select>
                     </div>
                     <div className="grid-item palm-one-whole lap-one-third desk-one-third ">
-                        <button className="field" oncl ><Translate value="searchBar.search"/></button>
+                        <button className="field" onClick={() => this.displayJobIn(this.state.jobField, this.state.city)}><Translate value="searchBar.search"/></button>
                     </div>
                     <div className="grid-item one-whole align-center">
-                        <button className="field align-center one-half" onClick={this.searchAllJobs} ><Translate value="searchBar.searchAllJobs"/></button>
+                        <button className="field align-center one-half" onClick={() => this.displayAllJobs()} ><Translate value="searchBar.searchAllJobs"/></button>
                     </div>
                 </div>
                 {this.state.showJobList && this.state.jobAds &&
