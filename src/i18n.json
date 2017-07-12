@@ -4,10 +4,11 @@
             "title": "Tolle app mit i18n"
         },
         "diversity": {
-            "headline": "Ein Blick auf unsere akutelle Vielfältigkeit",
+            "headline": "Ein Blick auf unsere aktuelle Vielfältigkeit",
             "genderChart": "Geschlechter in Tech",
             "women": "Frauen",
-            "men": "Männer"
+            "men": "Männer",
+            "origin": "Herkunft"
         },
         "searchBar": {
             "search": "Finden",
@@ -17,7 +18,8 @@
                 "berlin": "Berlin"
             },
             "iSearchFor": "Ich suche nach",
-            "jobsIn": "Jobs in"
+            "jobsIn": "Jobs in",
+            "searchAllJobs": "Alle aktuellen Jobs in Tech anzeigen"
         }
     },
     "en": {
@@ -28,7 +30,8 @@
             "headline": "A look at our current diversity numbers",
             "genderChart": "Gender in Tech",
             "women": "Women",
-            "men": "Men"
+            "men": "Men",
+            "origin": "Origins"
         },
         "searchBar": {
             "search": "Find",
@@ -38,7 +41,8 @@
                 "berlin": "Berlin"
             },
             "iSearchFor": "I'm looking for",
-            "jobsIn": "Jobs in"
+            "jobsIn": "Jobs in",
+            "searchAllJobs": "Show all current Jobs in Tech"
         }
     }
 }

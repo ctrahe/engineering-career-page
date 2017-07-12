@@ -4,11 +4,11 @@ import { Translate } from 'react-i18nify';
 import { getEngineeringJobAds } from './../GreenhouseApi';
 
 class SearchBar extends Component {
-  // search:function(keyword, city) {
-  //   getEngineeringJobAds().then(jobAds => {
-  //     this.setState({jobAds: jobAds})
-  //   });
-  // },
+      // search:function(keyword, city) {
+      //   getEngineeringJobAds().then(jobAds => {
+      //     this.setState({jobAds: jobAds})
+      //   });
+      // },
     render() {
         return (
             <div className="search-bar grid gutter-m padding-vertical-m padding-horizontal-s">
@@ -28,6 +28,9 @@ class SearchBar extends Component {
                 </div>
                 <div className="grid-item palm-one-whole lap-one-third desk-one-third ">
                     <button className="field" ><Translate value="searchBar.search"/></button>
+                </div>
+                <div className="grid-item one-whole align-center">
+                    <button className="field align-center one-half" ><Translate value="searchBar.searchAllJobs"/></button>
                 </div>
             </div>
         );
