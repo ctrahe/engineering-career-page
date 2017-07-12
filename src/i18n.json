@@ -1,0 +1,12 @@
+{
+    "de": {
+        "application": {
+            "title": "Tolle app mit i18n"
+        }
+    },
+    "en": {
+        "application": {
+            "title": "Awesome app with i18n!"
+        }
+    }
+}
