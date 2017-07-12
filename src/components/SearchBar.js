@@ -27,7 +27,7 @@ class SearchBar extends Component {
                     </select>
                 </div>
                 <div className="grid-item palm-one-whole lap-one-third desk-one-third ">
-                    <button className="field" ><Translate value="searchBar.search"/></button>
+                    <button className="field" oncl ><Translate value="searchBar.search"/></button>
                 </div>
                 <div className="grid-item one-whole align-center">
                     <button className="field align-center one-half" ><Translate value="searchBar.searchAllJobs"/></button>

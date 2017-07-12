@@ -29,7 +29,7 @@ class GenderChart extends Component {
     render() {
         return (
             <div className="align-center padding-top-l">
-              <h6 className="font-l font-light"><Translate value="diversity.genderChart"/></h6>
+              <h6 className="font-l font-light text-center"><Translate value="diversity.genderChart"/></h6>
               <Doughnut data={data} options={config} redraw/>
             </div>
         );

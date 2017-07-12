@@ -1,74 +1,16 @@
 import React from 'react'
 import './Footer.css'
 
-
 const Footer = () =>
-  <footer className="grid one-whole main-footer" data-cms-qa="page-footer">
-    <h6>Seiteninformationen</h6>
-    <ul>
-      <li>
-        <a
-          href="https://www.immobilienscout24.de/kontakt/"
-          title="Kontakt &amp; Hilfe"
-          aria-label="Kontakt &amp; Hilfe"
-          target="_blank"
-        >
-          Kontakt & Hilfe
-        </a>
-      </li>
-      <li>
-        <a
-          href= "https://www.immobilienscout24.de/impressum.html"
-          title="Impressum"
-          aria-label="Impressum"
-          target="_blank"
-        >
-          Impressum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.immobilienscout24.de/agb.html"
-          title="AGB &amp; Rechtliche Hinweise"
-          aria-label="AGB &amp; Rechtliche Hinweise"
-          target="_blank"
-        >
-          AGB & Rechtliche Hinweise
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.immobilienscout24.de//agb/verbraucherinformationen.html"
-          title="Verbraucherinformationen"
-          aria-label="Verbraucherinformationen"
-          target="_blank"
-        >
-          Verbraucherinformationen
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.immobilienscout24.de/agb/datenschutz.html"
-          aria-label="Datenschutz"
-          target="_blank"
-        >
-          Datenschutz
-        </a>
-      </li>
-      <li>
-        <a
-          href="//sicherheit.immobilienscout24.de"
-          title="Sicherheit"
-          aria-label="Sicherheit"
-          target="_blank"
-        >
-          Sicherheit
-        </a>
-      </li>
-    </ul>
-    <p className="build-information">
-      © Copyright 1999 - 2017 Immobilien Scout GmbH
-    </p>
+  <footer className="grid-item one-whole main-footer" data-cms-qa="page-footer">
+      <div>
+        <p>&copy; Copyright 2017 by Scout24</p>
+        <div class="content">
+          <ul>
+            <li><a target="_blank" href="http://www.scout24.com/FooterNavi/Impressum/impressum.aspx" title="Impressum">Impressum</a></li>   <li><a target="_blank" href="http://www.scout24.com/FooterNavi/Datenschutz/datenschutzerklaerung.aspx" title="Datenschutz">Datenschutz</a></li>   <li><a target="_blank" href="http://www.scout24.com/FooterNavi/Anfahrt/anfahrt.aspx" title="Anfahrt">Anfahrt</a></li>
+          </ul>
+        </div>
+    </div>
   </footer>
 
 export default Footer

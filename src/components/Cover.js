@@ -4,7 +4,7 @@ import video from './../videos/CareerPageVideo-cover.mp4';
 import SearchBar from "./SearchBar";
 
 const Cover = () => (
-    <div className="grid one-whole">
+    <div className="grid-item one-whole">
         <video autoPlay loop muted className="cover-video">
           <source src={video}  type="video/mp4" />
         </video>
