@@ -20,6 +20,15 @@ class JobList extends Component {
         return (
             <div className="jobs-container">
                 <h2 className="text-center">Job List</h2>
+                <div className="job-info">
+                    <strong>Name</strong>
+                </div>
+                <div className="job-info">
+                    <strong>Department</strong>
+                </div>
+                <div className="job-info">
+                    <strong>Location</strong>
+                </div>
                 <ul>
                     {this.state.jobAds.map(function(jobAd, index){
                         return <JobAdEntry jobAd={jobAd} />;
