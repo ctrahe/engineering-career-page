@@ -14,9 +14,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // getEngineeringJobAds().then(jobAds => {
-    //     this.setState({jobAds: jobAds})
-    // });
+    getEngineeringJobAds().then(jobAds => {
+        this.setState({jobAds: jobAds})
+    });
   }
 
   render() {

@@ -28,7 +28,7 @@ class GenderChart extends Component {
         return (
             <div className="align-center padding-top-l">
               <h6 className="font-l font-light">Gender in Tech</h6>
-              <Doughnut data={data} options={config} redraw width="600" height="250"/>
+              <Doughnut data={data} options={config} redraw/>
             </div>
         );
     }
