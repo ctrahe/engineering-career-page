@@ -1,5 +1,34 @@
-.specialty{
-  height: 3em;
-  width: 100%;
+.search-bar {
+  background-color: rgba(51,51,51,0.5);
+  width: 70%;
+  top: 30%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+
+.field {
   text-indent: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: white;
+  height: 4.4rem;
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem;
 }
