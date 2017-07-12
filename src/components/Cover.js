@@ -1,11 +1,13 @@
 import React from 'react';
 import './cover.css';
-import cover from './../images/cover_image.jpg';
+import video from './../videos/CareerPageVideo-cover.mp4';
 import SearchBar from "./SearchBar";
 
 const Cover = () => (
     <div className="grid one-whole">
-        <img  src={cover} className="cover-image" ></img>
+        <video autoPlay loop className="cover-video">
+          <source src={video}  type="video/mp4" />
+        </video>
         <SearchBar/>
     </div>
 );
