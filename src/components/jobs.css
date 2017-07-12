@@ -1,6 +1,6 @@
 .job-entry{
-  padding-bottom: 10px;
-  margin: 10px;
+  padding-bottom: 20px;
+
   border-bottom: 1px solid lightgray;
 }
 a:link{
@@ -15,6 +15,9 @@ a:hover{
 }
 .jobs-container{
   text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 50px;
 }
 .job-info{
   display: inline-block;
@@ -22,4 +25,14 @@ a:hover{
   width: 30%;
 }
 
-
+.detail-filters{
+  padding-bottom: 50px;
+  padding-top: 20px;
+  font-size: 1.6rem;
+}
+.jobs-list{
+  padding-top: 10px;
+}
+.detail-filters-select{
+  padding-right: 50px;
+}

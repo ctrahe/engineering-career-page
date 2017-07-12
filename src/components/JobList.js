@@ -3,23 +3,24 @@ import './SearchBar.css'
 import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
 import JobAdEntry from './JobAdEntry';
+import Filters from './Filters';
 
 class JobList extends Component {
 
     render() {
         return (
             <div className="jobs-container">
-                <h2 className="text-center">Job List</h2>
+                <Filters />
                 <div className="job-info">
-                    <strong>Name</strong>
+                    <h3>Name</h3>
                 </div>
                 <div className="job-info">
-                    <strong>Department</strong>
+                    <h3>Department</h3>
                 </div>
                 <div className="job-info">
-                    <strong>Location</strong>
+                  <h3>Location</h3>
                 </div>
-                <ul>
+                <ul className="jobs-list">
                     {this.props.jobAds.map(function(jobAd, index){
                         return <JobAdEntry jobAd={jobAd} key={index}/>;
                     })}

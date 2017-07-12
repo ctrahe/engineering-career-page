@@ -68,7 +68,7 @@ class SearchBar extends Component {
                             <option selected value="all"><Translate value="searchBar.cities.all"/></option>
                             <option value="Berlin"><Translate value="searchBar.cities.berlin"/></option>
                             <option value="Munich"><Translate value="searchBar.cities.munich"/></option>
-                        </select>
+                      </select>
                     </div>
                     <div className="grid-item palm-one-whole lap-one-third desk-one-third ">
                         <button className="field" onClick={() => this.displayJobIn(this.state.jobField, this.state.city)}><Translate value="searchBar.search"/></button>
