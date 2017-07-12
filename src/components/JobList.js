@@ -18,14 +18,13 @@ class JobList extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Job List</h2>
-                {/*{this.state.jobAds && this.state.jobAds.forEach(jobAd => {*/}
-                    {/*<span>{jobAd.title}</span>*/}
-                {/*})}*/}
-                {this.state.jobAds.map(function(jobAd, index){
-                    return <JobAdEntry jobAd={jobAd} />;
-                })}
+            <div className="jobs-container">
+                <h2 className="text-center">Job List</h2>
+                <ul>
+                    {this.state.jobAds.map(function(jobAd, index){
+                        return <JobAdEntry jobAd={jobAd} />;
+                    })}
+                </ul>
             </div>
 
         );
