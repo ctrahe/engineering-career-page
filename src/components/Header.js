@@ -23,7 +23,7 @@ const Header = () => (
     </div>
     <div className="grid-item padding-top-s">
         <p><Translate value="application.title"/></p>
-      <a onClick={() => changeLocaleToGerman()}>DE |</a>
+      <a onClick={() => changeLocaleToGerman()}>DE </a>|
       <a onClick={() => changeLocaleToEnglish()}> EN</a>
     </div>
   </div>
