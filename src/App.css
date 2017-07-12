@@ -5,3 +5,7 @@
 .App-intro {
   font-size: large;
 }
+
+.diversity-map{
+  width: inherit;
+}

@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Cover from './components/Cover';
 import Diversity from './components/diversity/Diversity';
-import { getEngineeringJobAds } from './GreenhouseApi';
+
 
 class App extends Component {
 
@@ -13,11 +13,6 @@ class App extends Component {
       this.state = {jobAds: []};
   }
 
-  componentDidMount() {
-    getEngineeringJobAds().then(jobAds => {
-        this.setState({jobAds: jobAds})
-    });
-  }
 
   render() {
     return (
