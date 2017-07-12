@@ -4,7 +4,6 @@ import logoIS24 from './../images/is24.png';
 import logoAS24 from './../images/as24.png';
 import './Header.css'
 import { I18n } from 'react-i18nify';
-import { Translate } from 'react-i18nify';
 
 const changeLocaleToGerman = () => {
     I18n.setLocale('de',true);
@@ -22,8 +21,7 @@ const Header = () => (
       <img src={logoIS24} className="logo" alt="logo" />
     </div>
     <div className="grid-item padding-top-s">
-        <p><Translate value="application.title"/></p>
-      <a onClick={() => changeLocaleToGerman()}>DE </a>|
+      <a onClick={() => changeLocaleToGerman()}>DE |</a>
       <a onClick={() => changeLocaleToEnglish()}> EN</a>
     </div>
   </div>

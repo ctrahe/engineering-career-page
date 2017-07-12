@@ -2,11 +2,44 @@
     "de": {
         "application": {
             "title": "Tolle app mit i18n"
+        },
+        "diversity": {
+            "headline": "Ein Blick auf unsere akutelle Vielfältigkeit",
+            "genderChart": "Geschlechter in Tech",
+            "women": "Frauen",
+            "men": "Männer"
+        },
+        "searchBar": {
+            "search": "Finden",
+            "cities": {
+                "all" : "Alle Standorte",
+                "munich": "München",
+                "berlin": "Berlin"
+            },
+            "iSearchFor": "Ich suche nach",
+            "jobsIn": "Jobs in"
         }
     },
     "en": {
         "application": {
             "title": "Awesome app with i18n!"
+        },
+        "diversity": {
+            "headline": "A look at our current diversity numbers",
+            "genderChart": "Gender in Tech",
+            "women": "Women",
+            "men": "Men",
+            ""
+        },
+        "searchBar": {
+            "search": "Find",
+            "cities": {
+                "all" : "All cities",
+                "munich": "Munich",
+                "berlin": "Berlin"
+            },
+            "iSearchFor": "I'm looking for",
+            "jobsIn": "Jobs in"
         }
     }
 }

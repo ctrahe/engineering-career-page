@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SearchBar.css'
+import { Translate } from 'react-i18nify';
 import { getEngineeringJobAds } from './../GreenhouseApi';
 
 class SearchBar extends Component {
@@ -20,13 +21,13 @@ class SearchBar extends Component {
                 <div className="grid-item palm-one-whole lap-one-third desk-one-third">
                   {/*<span>in:</span>*/}
                   <select className="field">
-                        <option selected value>Everywhere</option>
-                        <option value="Berlin">Berlin</option>
-                        <option value="Munich">Munich</option>
+                        <option selected value><Translate value="searchBar.cities.all"/></option>
+                        <option value="Berlin"><Translate value="searchBar.cities.berlin"/></option>
+                        <option value="Munich"><Translate value="searchBar.cities.munich"/></option>
                     </select>
                 </div>
                 <div className="grid-item palm-one-whole lap-one-third desk-one-third ">
-                    <button className="field" >Search</button>
+                    <button className="field" ><Translate value="searchBar.search"/></button>
                 </div>
             </div>
         );

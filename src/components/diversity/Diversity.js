@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import GenderChart from './GenderChart';
+import { Translate } from 'react-i18nify';
 import diversityMap from './../../images/diversity.png'
 
 class Diversity extends Component {
     render() {
         return (
           <div className="grid one-whole margin-top-xl">
-            <h3 className="font-xxl font-light">A look at our current diversity numbers</h3>
+            <h3 className="font-xxl font-light"><Translate value="diversity.headline"/></h3>
             <div className="grid one-half" >
               <GenderChart/>
             </div>
