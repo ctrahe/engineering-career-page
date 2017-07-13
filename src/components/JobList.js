@@ -67,14 +67,14 @@ class JobList extends Component {
 
         return (
             <div className="jobs-container">
-                <div className="job-info align-center font-m">
+                <div className="job-info font-m palm-one-whole">
                     <select className="filterField" onChange={ (event) => this.applyFilter(event) } name="position">
                         <option selected value="all"><Translate value="filter.position.all"/></option>
                         <option value="fulltime"><Translate value="filter.position.fullTime"/></option>
                         <option value="parttime"><Translate value="filter.position.partTime"/></option>
                     </select>
                 </div>
-                <div className="job-info">
+                <div className="job-info palm-one-whole">
                   <select className="filterField" onChange={ (event) => this.applyFilter(event) } name="department">
                     <option selected value="all"><Translate value="filter.department.all"/></option>
                     <option value="Technology"><Translate value="Technology"/></option>
@@ -84,7 +84,7 @@ class JobList extends Component {
                     <option value="Product Management & UX"><Translate value="Product Management & UX"/></option>
                   </select>
                 </div>
-                <div className="job-info">
+                <div className="job-info palm-one-whole">
                   <select className="filterField" name="city"  onChange={ (event) => this.applyFilter(event) }>
                     <option selected value="all"><Translate value="filter.cities.all"/></option>
                     <option value="Berlin"><Translate value="filter.cities.berlin"/></option>
@@ -92,7 +92,7 @@ class JobList extends Component {
                     <option value="Vienna"><Translate value="filter.cities.vienna"/></option>
                   </select>
                 </div>
-               <div className="job-info">
+               <div className="job-info palm-one-whole">
                  <select className="filterField" name="company"  onChange={ (event) => this.applyFilter(event) }>
                    <option selected value="all"><Translate value="filter.company.all"/></option>
                    <option value="AutoScout24"><Translate value="AutoScout24"/></option>

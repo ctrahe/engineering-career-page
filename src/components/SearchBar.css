@@ -1,30 +1,29 @@
 .search-bar {
   background-color: rgba(51,51,51,0.5);
   width: 80%;
-
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
 
 }
-@media only screen and (min-width: 1013px) {
+@media only screen and (min-width: 1030px) {
   .search-bar {
     top:25%;
     position: absolute;
   }
 }
-@media only screen and (min-width: 669px) and (max-width: 1013px) {
+@media only screen and (min-width: 669px) and (max-width: 1029px) {
   .search-bar {
-    top:17%;
+    top:9%;
     position: absolute;
 
   }
 }
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 1013px) {
   .search-bar {
-    top:10%;
-    display: block;
+    top:9%;
+    position: absolute;
   }
 }
 .form-labels {

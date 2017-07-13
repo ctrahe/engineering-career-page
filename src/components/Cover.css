@@ -1,8 +1,11 @@
 .cover-video {
     position: relative;
-    min-width: 100%;
     min-height: 100%;
+    width: 100%;
     filter: blur(1px) brightness(70%);
     -webkit-filter: blur(1px) brightness(70%);
 }
-
+.video-image{
+  height: 350px;
+  width: 669px;
+}
