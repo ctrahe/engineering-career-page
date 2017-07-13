@@ -9,8 +9,11 @@ class Filters extends Component {
           <span className="detail-filters-select">
             <select>
               <option selected value="all"><Translate value="all"/></option>
-              <option value="IT"><Translate value="IT"/></option>
-              <option value="UX"><Translate value="UX"/></option>
+              <option value="Technology"><Translate value="Technology"/></option>
+              <option value="Infrastructure & Operations"><Translate value="Infrastructure & Operations"/></option>
+              <option value="Software Engineering"><Translate value="Software Engineering"/></option>
+              <option value="Data Science & Analytics"><Translate value="Data Science & Analytics"/></option>
+              <option value="Product Management & UX"><Translate value="Product Management & UX"/></option>
             </select>
           </span>
           <span className="padding-m">City</span>

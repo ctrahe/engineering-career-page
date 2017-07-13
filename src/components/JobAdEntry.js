@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 const JobAdEntry = (props) =>
   <a href={props.jobAd.absolute_url}>
             <li className="job-entry" >
-
                 <div className="job-info">
                     <strong>{props.jobAd && props.jobAd.title}</strong>
                 </div>
@@ -21,8 +20,6 @@ const JobAdEntry = (props) =>
                  <i className="fa fa-building"></i>
                  <strong>{props.jobAd && props.jobAd.metadata[0].value}</strong>
                </div>
-
             </li>
-
-</a>
+  </a>
 export default JobAdEntry;

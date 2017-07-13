@@ -22,8 +22,10 @@ a:hover{
 }
 .job-info{
   display: inline-block;
-  padding-right: 50px;
+  padding-right: 40px;
   width: 25%;
+  vertical-align: middle;
+  padding: 10px;
 }
 
 .detail-filters{
@@ -31,9 +33,6 @@ a:hover{
   padding-top: 20px;
   font-size: 1.6rem;
 }
-/*.jobs-list{*/
-  /*padding-top: 10px;*/
-/*}*/
 .detail-filters-select{
   padding-right: 50px;
 }
