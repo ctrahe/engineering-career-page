@@ -46,7 +46,8 @@
         "iconScout": {
             "title": "Social Media",
             "text": "Schaue dir unsere Social Media Activitäten an."
-        }
+        },
+        "hideJobs": "Jobs verbergen"
     },
     "en": {
         "application": {
@@ -95,6 +96,7 @@
         "iconScout": {
             "title": "Social Media",
             "text": "Find out about our social activities."
-        }
+        },
+        "hideJobs": "Hide jobs"
     }
 }
