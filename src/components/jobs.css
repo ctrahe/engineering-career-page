@@ -1,8 +1,7 @@
 .job-entry{
   margin: 15px;
   min-height: 60px;
-  background-color: #F4F6F8;
-  border-bottom: 1px solid lightgray;
+  border: 1px solid lightgray;
 }
 a:link{
   color: grey;

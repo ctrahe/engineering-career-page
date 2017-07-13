@@ -1,7 +1,7 @@
 .search-bar {
   background-color: rgba(51,51,51,0.5);
   width: 80%;
-  position: absolute;
+
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -10,17 +10,21 @@
 }
 @media only screen and (min-width: 1013px) {
   .search-bar {
-    top:30%
+    top:25%;
+    position: absolute;
   }
 }
 @media only screen and (min-width: 669px) and (max-width: 1013px) {
   .search-bar {
-    top:17%
+    top:17%;
+    position: absolute;
+
   }
 }
 @media only screen and (max-width: 668px) {
   .search-bar {
-    top:10%
+    top:10%;
+    display: block;
   }
 }
 .form-labels {
@@ -43,7 +47,6 @@
 input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-
 .field {
   background-color: transparent;
   border: 2px solid #fff;

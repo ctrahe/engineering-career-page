@@ -14,13 +14,13 @@ const changeLocaleToEnglish = () => {
 }
 
 const Header = () => (
-  <div className="grid-item padding-horizontal-m grid-flex grid-justify-space-between padding-vertical-s">
-    <div className="grid-item">
+  <div className="grid-item one-whole header">
+    <div className="grid-item palm-two-thirds desk-eleven-twelfths lap-eleven-twelfths">
       <img src={logoScout24} className="logo" alt="logo" />
       <img src={logoAS24} className="logo" alt="logo" />
       <img src={logoIS24} className="logo" alt="logo" />
     </div>
-    <div className="grid-item padding-top-m padding-right-xl">
+    <div className="grid-item palm-one-third languages desk-one-twelfth lap-one-twelfth">
       <a onClick={() => changeLocaleToGerman()}>DE |</a>
       <a onClick={() => changeLocaleToEnglish()}> EN</a>
     </div>
