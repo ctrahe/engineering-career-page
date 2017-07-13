@@ -11,3 +11,9 @@
    color: #343434;
    text-decoration: none;
 }
+
+.divider {
+    border: 1px solid #e0e0e0;
+    width: 50%;
+    margin: 70px auto 0 auto;
+}

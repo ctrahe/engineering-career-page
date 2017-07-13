@@ -11,6 +11,7 @@ const IconCockpit = () => (
             <IconSocialMedia/>
             <IconTechBlog/>
         </div>
+        <div className="divider"/>
     </div>
 );
 
