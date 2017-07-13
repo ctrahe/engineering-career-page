@@ -51,6 +51,9 @@ class SearchBar extends Component {
                     if(city == 'Munich') {
                         matchesCity = (matchesCity || job.location.name.includes('München'));
                     }
+                    if(city == 'Vienna') {
+                        matchesCity = (matchesCity || job.location.name.includes('Wien'));
+                    }
                     return matchesCity && (matchesTitle || matchesDescription || matchesDepartment);
                 }
             );
