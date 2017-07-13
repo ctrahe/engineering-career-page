@@ -1,12 +1,31 @@
 .search-bar {
   background-color: rgba(51,51,51,0.5);
-  width: 70%;
-  top: 30%;
+  width: 80%;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+
+}
+@media only screen and (min-width: 1013px) {
+  .search-bar {
+    top:30%
+  }
+}
+@media only screen and (min-width: 669px) and (max-width: 1013px) {
+  .search-bar {
+    top:17%
+  }
+}
+@media only screen and (max-width: 668px) {
+  .search-bar {
+    top:10%
+  }
+}
+.form-labels {
+  color:white;
+  font-size: 1.6rem;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: rgba(251,251,251,0.5);

@@ -65,9 +65,9 @@ class SearchBar extends Component {
     render() {
         return (
             <div>
-                <div className="search-bar grid gutter-m padding-vertical-m padding-horizontal-s">
+                <div className="search-bar grid gutter-m padding-vertical-l padding-horizontal-s">
                     <div className="grid-item palm-one-whole lap-one-half desk-one-sixth padding-top-s align-center">
-                        <span className="font-m font-white"><Translate value="searchBar.iSearchFor"/></span>
+                        <span className="form-labels"><Translate value="searchBar.iSearchFor"/></span>
                     </div>
                     <div className="grid-item palm-one-whole lap-one-half desk-one-fourth">
                       <span>
@@ -75,7 +75,7 @@ class SearchBar extends Component {
                       </span>
                     </div>
                     <div className="grid-item palm-one-whole lap-one-half desk-one-tenth padding-top-s align-center">
-                        <span className="font-m font-white"><Translate value="searchBar.jobsIn"/></span>
+                        <span className="form-labels"><Translate value="searchBar.jobsIn"/></span>
                     </div>
                     <div className="grid-item palm-one-whole lap-one-half desk-one-fifth">
                       <select className="field" onChange={(event) => this.handleCityChange(event)} value={this.state.city}>
@@ -85,11 +85,11 @@ class SearchBar extends Component {
                             <option value="Vienna"><Translate value="searchBar.cities.vienna"/></option>
                       </select>
                     </div>
-                    <div className="grid-item palm-one-whole lap-one-whole desk-one-fourth ">
+                    <div className="grid-item palm-one-whole lap-one-half desk-one-fourth  align-center">
                         <button className="field" onClick={() => this.displayJobIn(this.state.jobField, this.state.city)}><Translate value="searchBar.search"/></button>
                     </div>
-                    <div className="grid-item one-whole align-center">
-                        <button className="field align-center one-half" onClick={() => this.displayAllJobs()} ><Translate value="searchBar.searchAllJobs"/></button>
+                    <div className="grid-item palm-one-whole lap-one-half desk-one-whole  align-center">
+                        <button className="horizontal-center desk-one-half field" onClick={() => this.displayAllJobs()} ><Translate value="searchBar.searchAllJobs"/></button>
                     </div>
                 </div>
                 {this.state.showJobList && this.state.jobAds &&
