@@ -13,6 +13,7 @@ const JobAdEntry = (props) =>
                    <strong>{props.jobAd && props.jobAd.departments[0].name}</strong>
                </div>
                <div className="job-info">
+                   <i className="fa fa-map-marker"></i>
                    <strong>{props.jobAd && props.jobAd.location.name}</strong>
                </div>
                </a>

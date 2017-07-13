@@ -14,7 +14,7 @@ const changeLocaleToEnglish = () => {
 }
 
 const Header = () => (
-  <div className="grid-item grid-flex grid-justify-space-between padding-horizontal-xxl padding-vertical-s margin-horizontal-xxl">
+  <div className="grid-item grid-flex grid-justify-space-between padding-vertical-s">
     <div className="grid-item">
       <img src={logoScout24} className="logo" alt="logo" />
       <img src={logoAS24} className="logo" alt="logo" />

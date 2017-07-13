@@ -5,7 +5,9 @@
 .App-intro {
   font-size: large;
 }
-
+.map{
+  text-align: center;
+}
 .text-center{
   text-align: center;
 }
