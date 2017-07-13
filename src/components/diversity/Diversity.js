@@ -12,7 +12,7 @@ class Diversity extends Component {
               <GenderChart/>
             </div>
             <div className="grid-item one-half padding-top-l" >
-              <h6 className="font-l font-light four-fifths text-center">Diversity</h6>
+              <h6 className="font-l font-light four-fifths text-center"><Translate value="diversity.origin"/></h6>
               <img className="four-fifths padding-top-s" src={diversityMap}/>
             </div>
           </div>
