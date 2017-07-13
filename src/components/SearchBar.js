@@ -79,10 +79,10 @@ class SearchBar extends Component {
                     </div>
                     <div className="grid-item palm-one-whole lap-one-half desk-one-fifth">
                       <select className="field" onChange={(event) => this.handleCityChange(event)} value={this.state.city}>
-                            <option selected value="all"><Translate value="searchBar.cities.all"/></option>
-                            <option value="Berlin"><Translate value="searchBar.cities.berlin"/></option>
-                            <option value="Munich"><Translate value="searchBar.cities.munich"/></option>
-                            <option value="Vienna"><Translate value="searchBar.cities.vienna"/></option>
+                            <option selected value="all"><Translate value="filter.cities.all"/></option>
+                            <option value="Berlin"><Translate value="filter.cities.berlin"/></option>
+                            <option value="Munich"><Translate value="filter.cities.munich"/></option>
+                            <option value="Vienna"><Translate value="filter.cities.vienna"/></option>
                       </select>
                     </div>
                     <div className="grid-item palm-one-whole lap-one-half desk-one-fourth  align-center">

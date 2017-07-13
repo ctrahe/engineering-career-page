@@ -12,15 +12,29 @@
         },
         "searchBar": {
             "search": "Finden",
+            "iSearchFor": "Ich suche nach",
+            "jobsIn": "Jobs in",
+            "searchAllJobs": "Alle aktuellen Jobs in Tech anzeigen"
+        },
+        "filter": {
+            "position": {
+                "all": "Alle Positionen",
+                "fullTime": "Vollzeit",
+                "partTime": "Halbtags"
+            },
             "cities": {
                 "all" : "Alle Standorte",
                 "munich": "München",
                 "vienna": "Wien",
                 "berlin": "Berlin"
             },
-            "iSearchFor": "Ich suche nach",
-            "jobsIn": "Jobs in",
-            "searchAllJobs": "Alle aktuellen Jobs in Tech anzeigen"
+            "company": {
+                "all": "Alle Firmen"
+            },
+            "department": {
+                "all": "Alle Bereiche"
+            }
+
         }
     },
     "en": {
@@ -36,15 +50,28 @@
         },
         "searchBar": {
             "search": "Find",
+            "iSearchFor": "I'm looking for",
+            "jobsIn": "jobs in",
+            "searchAllJobs": "Show all current Jobs in Tech"
+        },
+        "filter": {
+            "position": {
+                "all": "All positions",
+                "fullTime": "full-time",
+                "partTime": "part-time"
+            },
             "cities": {
-                "all" : "All cities",
+                "all": "All cities",
                 "munich": "Munich",
                 "vienna": "Vienna",
                 "berlin": "Berlin"
             },
-            "iSearchFor": "I'm looking for",
-            "jobsIn": "jobs in",
-            "searchAllJobs": "Show all current Jobs in Tech"
+            "company": {
+                "all": "All companies"
+            },
+            "department": {
+                "all": "All departments"
+            }
         }
     }
 }
