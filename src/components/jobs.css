@@ -1,18 +1,20 @@
+.job-link:link{
+  color: grey;
+}
+
+.job-link:visited{
+  color: lightgray;
+}
+.job-link:hover{
+  color: orange;
+}
+
 .job-entry{
   margin: 15px;
   min-height: 60px;
   border: 1px solid lightgray;
 }
-a:link{
-  color: grey;
-}
 
-a:visited{
-  color: lightgray;
-}
-a:hover{
-  color: orange;
-}
 .jobs-container{
   text-align: center;
   width: 75%;

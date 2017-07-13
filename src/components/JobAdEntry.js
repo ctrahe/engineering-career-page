@@ -4,7 +4,7 @@ import './jobs.css'
 import PropTypes from 'prop-types';
 
 const JobAdEntry = (props) =>
-  <a href={props.jobAd.absolute_url}>
+  <a className="job-link" href={props.jobAd.absolute_url}>
             <li className="job-entry" >
                 <div className="job-info palm-one-whole">
                     <strong>{props.jobAd && props.jobAd.title}</strong>
