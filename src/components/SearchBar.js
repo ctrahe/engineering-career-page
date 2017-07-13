@@ -41,9 +41,9 @@ class SearchBar extends Component {
         getEngineeringJobAds().then(jobs => {
 
             const jobAds = [...jobs].filter((job) => {
-                    var matchesTitle = job.title.includes(jobField);
-                    var matchesDescription = job.content.includes(jobField);
-                    var matchesDepartment = job.departments[0].name.includes(jobField);
+                    var matchesTitle = job.title.toLowerCase().includes(jobField.toLowerCase());
+                    var matchesDescription = job.content.toLowerCase().includes(jobField.toLowerCase());
+                    var matchesDepartment = job.departments[0].name.toLowerCase().includes(jobField.toLowerCase());
                     if(city == 'all') {
                         return (matchesTitle || matchesDescription || matchesDepartment);
                     }
