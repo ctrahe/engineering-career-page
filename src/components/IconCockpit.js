@@ -1,7 +1,7 @@
 import React from 'react';
 import IconSocial from './IconSocial';
 import IconScout from './IconScout';
-import IconJobs from './IconJobs';
+import IconTechBlog from './IconTechBlog';
 import './IconCockpit.css';
 
 const IconCockpit = () => (
@@ -9,7 +9,7 @@ const IconCockpit = () => (
         <div className="grid grid-flex gutter-xl icon-cockpit">
             <IconSocial/>
             <IconScout/>
-            <IconJobs/>
+            <IconTechBlog/>
         </div>
     </div>
 );

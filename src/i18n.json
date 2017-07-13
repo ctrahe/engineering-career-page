@@ -38,6 +38,14 @@
         "iconSocial": {
             "title":"WeCare",
             "text":"Soziales Engagement gehört für Scout24 seit vielen Jahren selbstverständlich zur Unternehmenskultur. Hier kannst du mehr dazu lesen."
+        },
+        "iconTechBlog": {
+            "title": "Unser Tech-Blog",
+            "text": "Erfahre hier was unsere Scouts zum Thema Tech aktuell bewegt."
+        },
+        "iconScout": {
+            "title": "Social Media",
+            "text": "Schaue dir unsere Social Media Activitäten an."
         }
     },
     "en": {
@@ -79,6 +87,14 @@
         "iconSocial": {
             "title":"WeCare",
             "text":"For many years, social commitment has been part of Scout24's corporate culture."
+        },
+        "iconTechBlog": {
+            "title": "Our Tech-Blog",
+            "text": "Find out whats currently happening in our tech organisation."
+        },
+        "iconScout": {
+            "title": "Social Media",
+            "text": "Find out about our social activities."
         }
     }
 }
