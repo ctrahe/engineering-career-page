@@ -56,21 +56,25 @@ class SearchBar extends Component {
         return (
             <div>
                 <div className="search-bar grid gutter-m padding-vertical-m padding-horizontal-s">
-                    <div className="grid-item palm-one-whole lap-one-third desk-one-third">
-                      {/*<span>I am searching for:</span>*/}
+                    <div className="grid-item palm-one-whole lap-one-half desk-one-sixth padding-top-s align-center">
+                        <span className="font-m font-white"><Translate value="searchBar.iSearchFor"/></span>
+                    </div>
+                    <div className="grid-item palm-one-whole lap-one-half desk-one-fourth">
                       <span>
                         <input className="field" placeholder="Software developer" onChange={(event) => this.handleJobFieldChange(event)}/>
                       </span>
                     </div>
-                    <div className="grid-item palm-one-whole lap-one-third desk-one-third">
-                      {/*<span>in:</span>*/}
+                    <div className="grid-item palm-one-whole lap-one-half desk-one-tenth padding-top-s align-center">
+                        <span className="font-m font-white"><Translate value="searchBar.jobsIn"/></span>
+                    </div>
+                    <div className="grid-item palm-one-whole lap-one-half desk-one-fifth">
                       <select className="field" onChange={(event) => this.handleCityChange(event)} value={this.state.city}>
                             <option selected value="all"><Translate value="searchBar.cities.all"/></option>
                             <option value="Berlin"><Translate value="searchBar.cities.berlin"/></option>
                             <option value="Munich"><Translate value="searchBar.cities.munich"/></option>
                       </select>
                     </div>
-                    <div className="grid-item palm-one-whole lap-one-third desk-one-third ">
+                    <div className="grid-item palm-one-whole lap-one-whole desk-one-fourth ">
                         <button className="field" onClick={() => this.displayJobIn(this.state.jobField, this.state.city)}><Translate value="searchBar.search"/></button>
                     </div>
                     <div className="grid-item one-whole align-center">
