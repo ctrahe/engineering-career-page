@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './SearchBar.css'
+import './JobList.css'
 import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
 import JobAdEntry from './JobAdEntry';
@@ -32,7 +32,11 @@ class JobList extends Component {
         console.log('renderJobAds');
         const jobs = this.props.jobAds
             .filter(jobAd => (
-                (this.state.city === 'all' ? true : jobAd.location.name.includes(this.state.city)) &&
+                (
+                    (this.state.city === 'all' ? true : jobAd.location.name.includes(this.state.city)) ||
+                    (this.state.city === 'Munich' ? jobAd.location.name.includes('München') : false) ||
+                    (this.state.city === 'Vienna' ? jobAd.location.name.includes('Wien') : false)
+                ) &&
                 (this.state.department === 'all' ? true : jobAd.departments[0].name.includes(this.state.department)) &&
                 (this.state.company === 'all' ? true : jobAd.metadata[0].value.toLocaleLowerCase().includes(this.state.company.toLocaleLowerCase()))))
             .map((jobAd) => (
@@ -47,11 +51,11 @@ class JobList extends Component {
 
         return (
             <div className="jobs-container">
-                <div className="job-info">
+                <div className="job-info align-center font-m">
                     <p>Position</p>
                 </div>
                 <div className="job-info">
-                  <select onChange={ (event) => this.applyFilter(event) } name="department">
+                  <select className="filterField" onChange={ (event) => this.applyFilter(event) } name="department">
                     <option selected value="all"><Translate value="all"/></option>
                     <option value="Technology"><Translate value="Technology"/></option>
                     <option value="Infrastructure & Operations"><Translate value="Infrastructure & Operations"/></option>
@@ -61,7 +65,7 @@ class JobList extends Component {
                   </select>
                 </div>
                 <div className="job-info">
-                  <select name="city"  onChange={ (event) => this.applyFilter(event) }>
+                  <select className="filterField" name="city"  onChange={ (event) => this.applyFilter(event) }>
                     <option selected value="all"><Translate value="searchBar.cities.all"/></option>
                     <option value="Berlin"><Translate value="searchBar.cities.berlin"/></option>
                     <option value="Munich"><Translate value="searchBar.cities.munich"/></option>
@@ -69,7 +73,7 @@ class JobList extends Component {
                   </select>
                 </div>
                <div className="job-info">
-                 <select name="company"  onChange={ (event) => this.applyFilter(event) }>
+                 <select className="filterField" name="company"  onChange={ (event) => this.applyFilter(event) }>
                    <option selected value="all"><Translate value="All"/></option>
                    <option value="AutoScout24"><Translate value="AutoScout24"/></option>
                    <option value="ImmobilienScout24"><Translate value="ImmobilienScout24"/></option>
