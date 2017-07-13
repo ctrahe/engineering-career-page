@@ -19,6 +19,7 @@ class SearchBar extends Component {
         this.handleJobFieldChange = this.handleJobFieldChange.bind(this)
         this.handleCityChange = this.handleCityChange.bind(this)
         this.displayJobIn = this.displayJobIn.bind(this)
+        this.hideJobList = this.hideJobList.bind(this)
     }
 
     displayAllJobs() {
@@ -35,6 +36,10 @@ class SearchBar extends Component {
     handleCityChange(event) {
         console.log(event.target.value);
         this.setState({...this.state, city: event.target.value})
+    }
+
+    hideJobList() {
+        this.setState({...this.state, showJobList: false})
     }
 
     displayJobIn(jobField, city) {
@@ -95,7 +100,15 @@ class SearchBar extends Component {
                         <button className="horizontal-center desk-one-half field" onClick={() => this.displayAllJobs()} ><Translate value="searchBar.searchAllJobs"/></button>
                     </div>
                 </div>
+
+                {this.state.showJobList &&
+                    <div className="align-center">
+                        <a onClick={() => this.hideJobList()}><Translate value="hideJobs"/></a>
+                    </div>
+                }
+
                 {this.state.showJobList && this.state.jobAds &&
+
                     <JobList jobAds={this.state.jobAds}/>
                 }
             </div>
