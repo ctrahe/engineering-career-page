@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './SearchBar.css';
 import JobList from './JobList';
 import { Translate } from 'react-i18nify';
-import { getEngineeringJobAds } from './../GreenhouseApi';
 
 class SearchBar extends Component {
 
@@ -11,7 +10,7 @@ class SearchBar extends Component {
         this.state = {
             showJobList: false,
             jobAds: [],
-            jobField: 'Software Engineer',
+            jobField: '',
             city: 'all'
 
         }
@@ -23,10 +22,7 @@ class SearchBar extends Component {
     }
 
     displayAllJobs() {
-        getEngineeringJobAds().then(jobs => {
-                this.setState({...this.state, showJobList: true, jobAds: jobs});
-            }
-        );
+        this.setState({...this.state, jobField: '', city: 'all', showJobList: true})
     }
 
     handleJobFieldChange(event) {
@@ -34,7 +30,6 @@ class SearchBar extends Component {
     }
 
     handleCityChange(event) {
-        console.log(event.target.value);
         this.setState({...this.state, city: event.target.value})
     }
 
@@ -43,30 +38,10 @@ class SearchBar extends Component {
     }
 
     displayJobIn(jobField, city) {
-        getEngineeringJobAds().then(jobs => {
-
-            const jobAds = [...jobs].filter((job) => {
-                    var matchesTitle = job.title.toLowerCase().includes(jobField.toLowerCase());
-                    var matchesDescription = job.content.toLowerCase().includes(jobField.toLowerCase());
-                    var matchesDepartment = job.departments[0].name.toLowerCase().includes(jobField.toLowerCase());
-                    if(city == 'all') {
-                        return (matchesTitle || matchesDescription || matchesDepartment);
-                    }
-                    var matchesCity = job.location.name.includes(city);
-                    if(city == 'Munich') {
-                        matchesCity = (matchesCity || job.location.name.includes('München'));
-                    }
-                    if(city == 'Vienna') {
-                        matchesCity = (matchesCity || job.location.name.includes('Wien'));
-                    }
-                    return matchesCity && (matchesTitle || matchesDescription || matchesDepartment);
-                }
-            );
-
-            this.setState({
-                showJobList: true,
-                jobAds
-            });
+        this.setState({
+            ...this.state,
+            city: city,
+            jobField: jobField
         });
     }
 
@@ -107,9 +82,8 @@ class SearchBar extends Component {
                     </div>
                 }
 
-                {this.state.showJobList && this.state.jobAds &&
-
-                    <JobList jobAds={this.state.jobAds}/>
+                {this.state.showJobList &&
+                    <JobList city={this.state.city} jobField={this.state.jobField}/>
                 }
             </div>
         );

@@ -3,17 +3,28 @@ import './JobList.css'
 import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
 import JobAdEntry from './JobAdEntry';
+import { getEngineeringJobAds } from './../GreenhouseApi';
 
 class JobList extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            jobAds: null,
             department: 'all',
-            city: 'all',
+            city: props.city ? props.city : 'all',
             company: 'all',
             position: 'all',
+            jobField: props.city ? props.city : ''
         };
+    }
+
+    componentWillMount() {
+        getEngineeringJobAds().then(jobs => {
+            console.log(jobs);
+                this.setState({...this.state, jobAds: jobs});
+            }
+        );
     }
 
     applyFilter(event)  {
@@ -33,7 +44,14 @@ class JobList extends Component {
     }
 
     renderJobAds() {
-        const jobs = this.props.jobAds
+        if (!this.state.jobAds) {
+            return <div className="spinner">
+                        <div className="bounce1"></div>
+                        <div className="bounce2"></div>
+                        <div className="bounce3"></div>
+                    </div>;
+        }
+        const jobs = this.state.jobAds
             .filter(jobAd => (
                 (
                     (this.state.city === 'all' ? true : jobAd.location.name.includes(this.state.city)) ||
@@ -42,25 +60,31 @@ class JobList extends Component {
                 ) &&
                 (
                     (this.state.position === 'all' ? true :
-                        (this.state.position === 'parttime' ? //Filter Parttime
+                        (this.state.position === 'parttime' ?
+                                //Filter Parttime
                                 (
-                                    (jobAd.title.toLocaleLowerCase().includes('intern')) ||
-                                        jobAd.title.toLocaleLowerCase().includes('praktik')
-                                ) : //Filter Fulltime
+                                    (jobAd.title.toLowerCase().includes('intern')) ||
+                                        jobAd.title.toLowerCase().includes('praktik')
+                                ) :
+                                //Filter Fulltime
                                 (
-                                    !(jobAd.title.toLocaleLowerCase().includes('intern')) &&
-                                    !jobAd.title.toLocaleLowerCase().includes('praktik')
+                                    !(jobAd.title.toLowerCase().includes('intern')) &&
+                                    !jobAd.title.toLowerCase().includes('praktik')
                                 )
                         )
                     )
                 ) &&
                 (this.state.department === 'all' ? true : jobAd.departments[0].name.includes(this.state.department)) &&
-                (this.state.company === 'all' ? true : jobAd.metadata[0].value.toLocaleLowerCase().includes(this.state.company.toLocaleLowerCase()))))
+                (
+                    this.state.company === 'all' ? true :
+                        this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase() == this.state.company.toLowerCase() :
+                            jobAd.metadata[0].value.toLowerCase().includes(this.state.company.toLowerCase()))))
             .map((jobAd) => (
                 <JobAdEntry jobAd={jobAd} key={jobAd.id}/>)
             );
         return jobs;
     }
+
     render() {
 
         const filteredJobAds = this.renderJobAds();
@@ -85,7 +109,7 @@ class JobList extends Component {
                   </select>
                 </div>
                 <div className="job-info palm-one-whole">
-                  <select className="filterField" name="city"  onChange={ (event) => this.applyFilter(event) }>
+                  <select className="filterField" name="city"  onChange={ (event) => this.applyFilter(event) } value={this.state.city}>
                     <option selected value="all"><Translate value="filter.cities.all"/></option>
                     <option value="Berlin"><Translate value="filter.cities.berlin"/></option>
                     <option value="Munich"><Translate value="filter.cities.munich"/></option>
@@ -95,17 +119,16 @@ class JobList extends Component {
                <div className="job-info palm-one-whole">
                  <select className="filterField" name="company"  onChange={ (event) => this.applyFilter(event) }>
                    <option selected value="all"><Translate value="filter.company.all"/></option>
-                   <option value="AutoScout24"><Translate value="AutoScout24"/></option>
-                   <option value="ImmobilienScout24"><Translate value="ImmobilienScout24"/></option>
+                   <option value="AutoScout24"><Translate value="filter.company.as24"/></option>
+                   <option value="ImmobilienScout24"><Translate value="filter.company.is24"/></option>
+                   <option value="Scout24"><Translate value="filter.company.s24"/></option>
                  </select>
               </div>
                 <ul className="jobs-list">
 
+
                     { filteredJobAds }
 
-                    {/*{filteredJobAds.map(function(jobAd, index){*/}
-                        {/*return <JobAdEntry jobAd={jobAd} key={index}/>;*/}
-                    {/*})}*/}
                 </ul>
             </div>
 

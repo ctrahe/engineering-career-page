@@ -29,7 +29,10 @@
                 "berlin": "Berlin"
             },
             "company": {
-                "all": "Alle Firmen"
+                "all": "Alle Firmen",
+                "is24": "ImmobilienScout24",
+                "as24": "AutoScout24",
+                "s24": "Scout24"
             },
             "department": {
                 "all": "Alle Bereiche"
@@ -79,7 +82,10 @@
                 "berlin": "Berlin"
             },
             "company": {
-                "all": "All companies"
+                "all": "All companies",
+                "is24": "ImmobilienScout24",
+                "as24": "AutoScout24",
+                "s24": "Scout24"
             },
             "department": {
                 "all": "All departments"
