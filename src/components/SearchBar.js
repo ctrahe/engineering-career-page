@@ -82,6 +82,7 @@ class SearchBar extends Component {
                             <option selected value="all"><Translate value="searchBar.cities.all"/></option>
                             <option value="Berlin"><Translate value="searchBar.cities.berlin"/></option>
                             <option value="Munich"><Translate value="searchBar.cities.munich"/></option>
+                            <option value="Vienna"><Translate value="searchBar.cities.vienna"/></option>
                       </select>
                     </div>
                     <div className="grid-item palm-one-whole lap-one-whole desk-one-fourth ">

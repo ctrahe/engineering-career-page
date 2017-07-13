@@ -15,6 +15,7 @@
             "cities": {
                 "all" : "Alle Standorte",
                 "munich": "München",
+                "vienna": "Wien",
                 "berlin": "Berlin"
             },
             "iSearchFor": "Ich suche nach",
@@ -38,10 +39,11 @@
             "cities": {
                 "all" : "All cities",
                 "munich": "Munich",
+                "vienna": "Vienna",
                 "berlin": "Berlin"
             },
             "iSearchFor": "I'm looking for",
-            "jobsIn": "Jobs in",
+            "jobsIn": "jobs in",
             "searchAllJobs": "Show all current Jobs in Tech"
         }
     }
