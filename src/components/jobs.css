@@ -1,6 +1,7 @@
 .job-entry{
-  padding-bottom: 20px;
-
+  margin: 15px;
+  min-height: 60px;
+  background-color: #F4F6F8;
   border-bottom: 1px solid lightgray;
 }
 a:link{
@@ -22,7 +23,7 @@ a:hover{
 .job-info{
   display: inline-block;
   padding-right: 50px;
-  width: 30%;
+  width: 25%;
 }
 
 .detail-filters{
@@ -30,12 +31,12 @@ a:hover{
   padding-top: 20px;
   font-size: 1.6rem;
 }
-.jobs-list{
-  padding-top: 10px;
-}
+/*.jobs-list{*/
+  /*padding-top: 10px;*/
+/*}*/
 .detail-filters-select{
   padding-right: 50px;
 }
-.fa-map-marker{
+.fa{
   padding-right: 5px;
 }

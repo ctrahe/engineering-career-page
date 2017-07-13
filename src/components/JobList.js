@@ -12,14 +12,17 @@ class JobList extends Component {
             <div className="jobs-container">
                 <Filters />
                 <div className="job-info">
-                    <h3>Name</h3>
+                    <p>Position</p>
                 </div>
                 <div className="job-info">
-                    <h3>Department</h3>
+                    <p>Department</p>
                 </div>
                 <div className="job-info">
-                  <h3>Location</h3>
+                  <p>Location</p>
                 </div>
+               <div className="job-info">
+                <p>Company</p>
+              </div>
                 <ul className="jobs-list">
                     {this.props.jobAds.map(function(jobAd, index){
                         return <JobAdEntry jobAd={jobAd} key={index}/>;
