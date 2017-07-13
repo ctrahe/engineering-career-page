@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Cover from './components/Cover';
+import IconCockpit from './components/IconCockpit';
 import Diversity from './components/diversity/Diversity';
 
 
@@ -19,6 +20,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <Cover/>
+        <IconCockpit/>
         <Diversity/>
         <Footer />
 
