@@ -1,7 +1,6 @@
 import React  from 'react';
 import { Translate } from 'react-i18nify';
 import './jobs.css'
-import PropTypes from 'prop-types';
 
 const JobAdEntry = (props) =>
   <a className="job-link" href={props.jobAd.absolute_url}>
