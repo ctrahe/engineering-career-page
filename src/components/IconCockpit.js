@@ -5,7 +5,7 @@ import IconJobs from './IconJobs';
 import './IconCockpit.css';
 
 const IconCockpit = () => (
-    <div className="grid-item one-whole">
+    <div className="grid-item one-whole margin-top-l">
         <div className="grid grid-flex gutter-xl icon-cockpit">
             <IconSocial/>
             <IconScout/>

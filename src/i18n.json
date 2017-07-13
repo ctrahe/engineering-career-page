@@ -34,7 +34,10 @@
             "department": {
                 "all": "Alle Bereiche"
             }
-
+        },
+        "iconSocial": {
+            "title":"WeCare",
+            "text":"Soziales Engagement gehört für Scout24 seit vielen Jahren selbstverständlich zur Unternehmenskultur. Hier kannst du mehr dazu lesen."
         }
     },
     "en": {
@@ -72,6 +75,10 @@
             "department": {
                 "all": "All departments"
             }
+        },
+        "iconSocial": {
+            "title":"WeCare",
+            "text":"For many years, social commitment has been part of Scout24's corporate culture."
         }
     }
 }

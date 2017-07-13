@@ -8,7 +8,7 @@ class Diversity extends Component {
     render() {
         return (
           <div>
-              <div className="grid-item one-whole margin-top-l">
+              <div className="grid-item one-whole margin-top-xxl">
                 <h3 className="font-xxl font-light text-center"><Translate value="diversity.headline"/></h3>
                 <Claim/>
                 <div className="grid-item one-half palm-one-whole" >
