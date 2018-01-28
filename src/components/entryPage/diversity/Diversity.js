@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GenderChart from './GenderChart';
 import { Translate } from 'react-i18nify';
-import diversityMap from './../../images/diversity.png'
+import diversityMap from '../../../images/diversity.png'
 import Claim from './Claim';
 
 class Diversity extends Component {
@@ -18,7 +18,7 @@ class Diversity extends Component {
                   <div className="grid-item one-whole map">
                     <h6 className="font-l font-light text-center"><Translate value="diversity.origin"/></h6>
 
-                    <img className="four-fifths padding-top-s" src={diversityMap}/>
+                    <img className="four-fifths padding-top-s" src={diversityMap} alt="Diversity at Scout24"/>
                   </div>
                 </div>
               </div>

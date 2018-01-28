@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Translate } from 'react-i18nify';
+
 import './SearchBar.css';
 import JobList from './JobList';
-import { Translate } from 'react-i18nify';
 
 class SearchBar extends Component {
 
@@ -13,12 +14,12 @@ class SearchBar extends Component {
             jobField: '',
             city: 'all'
 
-        }
-        this.displayAllJobs = this.displayAllJobs.bind(this)
-        this.handleJobFieldChange = this.handleJobFieldChange.bind(this)
-        this.handleCityChange = this.handleCityChange.bind(this)
-        this.displayJobIn = this.displayJobIn.bind(this)
-        this.hideJobList = this.hideJobList.bind(this)
+        };
+        this.displayAllJobs = this.displayAllJobs.bind(this);
+        this.handleJobFieldChange = this.handleJobFieldChange.bind(this);
+        this.handleCityChange = this.handleCityChange.bind(this);
+        this.displayJobIn = this.displayJobIn.bind(this);
+        this.hideJobList = this.hideJobList.bind(this);
     }
 
     displayAllJobs() {

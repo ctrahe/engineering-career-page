@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
-import Header from './components/Header';
+import './index.css';
+import Header from './components/headerAndCover/Header';
 import Footer from './components/Footer';
-import Cover from './components/Cover';
-import IconCockpit from './components/IconCockpit';
-import Diversity from './components/diversity/Diversity';
+import Cover from './components/headerAndCover/Cover';
+import IconCockpit from './components/entryPage/icons/IconCockpit';
+import Diversity from './components/entryPage/diversity/Diversity';
 
 
 class App extends Component {

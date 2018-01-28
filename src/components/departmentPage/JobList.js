@@ -3,7 +3,7 @@ import './JobList.css'
 import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
 import JobAdEntry from './JobAdEntry';
-import { getEngineeringJobAds } from './../GreenhouseApi';
+import { getEngineeringJobAds } from '../../GreenhouseApi';
 
 class JobList extends Component {
 
@@ -77,7 +77,7 @@ class JobList extends Component {
                 (this.state.department === 'all' ? true : jobAd.departments[0].name.includes(this.state.department)) &&
                 (
                     this.state.company === 'all' ? true :
-                        this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase() == this.state.company.toLowerCase() :
+                        this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase() === this.state.company.toLowerCase() :
                             jobAd.metadata[0].value.toLowerCase().includes(this.state.company.toLowerCase()))))
             .map((jobAd) => (
                 <JobAdEntry jobAd={jobAd} key={jobAd.id}/>)
@@ -139,6 +139,6 @@ class JobList extends Component {
 
 JobList.propTypes = {
     jobAds: PropTypes.array
-}
+};
 
 export default JobList;
