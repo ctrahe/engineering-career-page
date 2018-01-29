@@ -2,17 +2,19 @@
   width: 100px;
   padding: 10px;
 }
+
 a{
   cursor: pointer;
 }
+
 .logos{
   padding-left: 15px;
 }
 
 .languages{
   float: right;
-
 }
+
 .header{
   white-space: nowrap;
 }
@@ -21,6 +23,7 @@ a{
   .logo{
     width: 80px;
   }
+
   .languages{
     padding-left: 50px;
   }
