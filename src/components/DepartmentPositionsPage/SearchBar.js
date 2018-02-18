@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Translate } from 'react-i18nify';
 
-import './SearchBar.css';
 import JobList from './JobList';
+import './searchBar.css';
 
 class SearchBar extends Component {
 

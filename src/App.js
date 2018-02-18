@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-import './index.css';
-import Header from './components/headerAndCover/Header';
-import Footer from './components/Footer';
-import Cover from './components/headerAndCover/Cover';
-import IconCockpit from './components/entryPage/icons/IconCockpit';
-import Diversity from './components/entryPage/diversity/Diversity';
+import React, {Component} from 'react';
+import {
+  HashRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
+import DepartmentPositions from './components/DepartmentPositionsPage';
+import './index.css';
+import EntryPage from './components/EntryPage';
+import AllPositions from './components/AllPositionsPage';
 
 class App extends Component {
 
@@ -14,21 +17,19 @@ class App extends Component {
       this.state = {jobAds: []};
   }
 
-
   render() {
     return (
-      <div className="App">
-        <Header/>
-        <Cover/>
-        <IconCockpit/>
-        <Diversity/>
-        <Footer />
-
-        {/*{this.state.jobAds.length && this.state.jobAds[0].title}*/}
-
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={EntryPage} />
+          <Route path="/all-positions" component={AllPositions} />
+          <Route path="/department-positions" component={DepartmentPositions} />
+        </Switch>
+      </Router>
     );
   }
+
+
 }
 
 export default App;

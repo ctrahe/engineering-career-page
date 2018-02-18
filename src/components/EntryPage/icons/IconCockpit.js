@@ -1,8 +1,9 @@
 import React from 'react';
+
 import IconWeCare from './IconWeCare';
 import IconSocialMedia from './IconSocialMedia';
 import IconTechBlog from './IconTechBlog';
-import './IconCockpit.css';
+import './iconCockpit.css';
 
 const IconCockpit = () => (
     <div className="grid-item one-whole margin-top-xxl margin-bottom-l">

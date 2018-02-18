@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './JobList.css'
 import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
-import JobAdEntry from './JobAdEntry';
+
 import { getEngineeringJobAds } from '../../GreenhouseApi';
+import JobAdEntry from './JobAdEntry';
+import './jobList.css'
 
 class JobList extends Component {
 

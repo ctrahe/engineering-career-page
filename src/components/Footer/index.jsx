@@ -1,5 +1,6 @@
 import React from 'react'
-import './Footer.css'
+
+import './footer.css'
 
 const Footer = () =>
   <footer className="grid-item one-whole main-footer" data-cms-qa="page-footer">
@@ -13,4 +14,4 @@ const Footer = () =>
     </div>
   </footer>;
 
-export default Footer
+export default Footer;
