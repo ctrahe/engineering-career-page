@@ -8,7 +8,7 @@ class AllPositions extends React.Component {
   render() {
     return (
       <Page>
-        <h1 className="title font-h2 padding-vertical-l">Current Job Openings</h1>
+        <h1 className="title font-h2 padding-vertical-xl">Current Job Openings</h1>
         <div className="grid gutter-xl">
           <div className="grid-item palm-one-whole lap-one-half desk-one-third">
             <div className="positions-container border padding-horizontal-m padding-vertical-l">
