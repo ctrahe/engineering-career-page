@@ -23,15 +23,17 @@
   position: absolute;
   font-size: 40px;
   color: #fff;
-  top: 32%;
+  top: 22%;
   left: 10%;
   font-weight: 100;
   text-shadow: 1px 2px 2px #000;
-  margin: 0 20px;
+  margin-right: 20px;
 }
+
 @media only screen and (min-width: 669px) and (max-width: 1013px) {
   .cover-phrase {
     font-size: 35px;
+    margin-right: 50px;
   }
 }
 
@@ -43,7 +45,7 @@
 
   .cover-phrase {
     font-size: 23px;
-    top: 24%;
+    top: 15%;
     left: 5%;
   }
 }
