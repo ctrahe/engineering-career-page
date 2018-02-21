@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
 
-import { getEngineeringJobAds } from '../../GreenhouseApi';
+import { getJobAds } from '../../GreenhouseApi';
 import JobAdEntry from './JobAdEntry';
 import './jobList.css'
 
@@ -21,7 +21,7 @@ class JobList extends Component {
     }
 
     componentWillMount() {
-        getEngineeringJobAds().then(jobs => {
+        getJobAds().then(jobs => {
             console.log(jobs);
                 this.setState({...this.state, jobAds: jobs});
             }
