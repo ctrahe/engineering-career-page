@@ -6,3 +6,12 @@
   background-color: #f4f6f8;
   cursor: pointer;
 }
+
+.article-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.article-text {
+  line-height: 25px;
+}
