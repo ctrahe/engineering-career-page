@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import Page from '../Page';
 import {getJobAds} from '../../GreenhouseApi';
@@ -20,15 +21,21 @@ class AllPositions extends React.Component {
     );
   };
 
+  removeWhitespaces(item) {
+    return item.replace(/\s+/g, '');
+  }
+
   renderJobs() {
     if (this.state.jobAds) {
       return this.createJobOpeningItem().map((item, index) => (
         <div className="grid-item palm-one-whole lap-one-half desk-one-third" key={index}>
-          <div className="positions-container border padding-horizontal-m padding-vertical-l">
-            <p className="font-m">{item.name}</p>
-            <span className="font-xxl font-light padding-right-s">{item.count}</span>
-            <span className="font-s font-lightgray">positions</span>
-          </div>
+          <Link to={/department-positions/ + this.removeWhitespaces(item.name)} className="positions-container">
+            <div className="border padding-horizontal-m padding-vertical-l">
+              <p className="font-m">{item.name}</p>
+              <span className="font-xxl font-light padding-right-s">{item.count}</span>
+              <span className="font-s font-lightgray">positions</span>
+            </div>
+          </Link>
         </div>
       ));
     }

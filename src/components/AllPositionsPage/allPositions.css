@@ -2,9 +2,20 @@
   text-align: center;
 }
 
-.positions-container:hover {
+a.positions-container {
+  color: #262626;
+  text-decoration: none;
+  display: block;
+}
+
+a.positions-container:hover {
   background-color: #f4f6f8;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.positions-container a:hover {
+  text-decoration: none;
 }
 
 .article-title {

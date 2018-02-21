@@ -14,7 +14,9 @@ class App extends Component {
 
   constructor(props) {
       super(props);
-      this.state = {jobAds: []};
+      this.state = {
+        jobAds: []
+      };
   }
 
   render() {
