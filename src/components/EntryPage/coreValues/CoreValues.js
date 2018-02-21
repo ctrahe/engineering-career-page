@@ -3,7 +3,7 @@ import React from 'react';
 import IconWeCare from './IconWeCare';
 import IconSocialMedia from './IconSocialMedia';
 import IconTechBlog from './IconTechBlog';
-import './iconCockpit.css';
+import './coreValues.css';
 
 const IconCockpit = () => (
     <div className="grid-item one-whole margin-top-xxl margin-bottom-l">
@@ -12,7 +12,6 @@ const IconCockpit = () => (
             <IconSocialMedia/>
             <IconTechBlog/>
         </div>
-        <div className="divider"/>
     </div>
 );
 
