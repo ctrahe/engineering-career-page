@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import Page from '../Page';
+import Cover from '../Cover';
 import {getJobAds} from '../../GreenhouseApi';
 import './allPositions.css';
-import Cover from "../Cover";
 
 class AllPositions extends React.Component {
 

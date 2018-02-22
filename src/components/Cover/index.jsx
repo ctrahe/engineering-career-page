@@ -9,7 +9,12 @@ import './cover.css';
 class Cover extends React.PureComponent {
 
   static propTypes = {
-    phrase: PropTypes.object.isRequired
+    phrase: PropTypes.object.isRequired,
+    button: PropTypes.node
+  };
+
+  static defaultProps = {
+    button: null
   };
 
   render() {
@@ -19,7 +24,12 @@ class Cover extends React.PureComponent {
         {/*<source src={video}  type="video/mp4" />*/}
         {/*</video>*/}
         <div className="cover-image"/>
-        <div className="cover-phrase">{ this.props.phrase }</div>
+        <div className="absolute-container">
+          <div className="cover-phrase">
+            {this.props.phrase}
+          </div>
+          {this.props.button}
+        </div>
       </div>
     )
   }

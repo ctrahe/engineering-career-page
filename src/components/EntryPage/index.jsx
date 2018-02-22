@@ -2,6 +2,7 @@ import React from 'react';
 
 import Page from '../Page';
 import Cover from '../Cover';
+import Button from './Button';
 import CoreValues from './coreValues/CoreValues';
 import './entryPage.css';
 
@@ -9,7 +10,8 @@ class EntryPage extends React.Component {
 
   render() {
     return (
-      <Page cover={<Cover phrase={<p>Inspiring your best decisions.<br/>We connect people, cars and homes.</p>}/>}>
+      <Page cover={<Cover phrase={<p>Inspiring your best decisions.<br/>We connect people, cars and homes.</p>}
+            button={<Button/>}/>}>
         <CoreValues/>
         <h1 className="grid-item margin-top-xl title font-h2 margin-bottom-none padding-vertical-xl">Working at
           Scout</h1>
@@ -94,6 +96,9 @@ class EntryPage extends React.Component {
                 of personnel development. Team leaders use our regular “Scouties” dialogues to determine the future
                 prospects for the employee resulting from these measures. The particular focus is on expanding the
                 employee's range of responsibilities.</p>
+            </div>
+            <div className="grid-item one-whole">
+              <Button/>
             </div>
           </div>
         </div>
