@@ -5,6 +5,7 @@
   "dependencies": {
     "chart.js": "2.7.1",
     "isomorphic-fetch": "2.2.1",
+    "prop-types": "^15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-i18nify": "1.11.12",
