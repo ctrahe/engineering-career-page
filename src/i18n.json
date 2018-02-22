@@ -1,108 +1,116 @@
 {
-    "de": {
-        "application": {
-            "title": "Tolle app mit i18n"
-        },
-        "diversity": {
-            "headline": "Ein Blick auf unsere aktuelle Vielfältigkeit",
-            "genderChart": "Geschlechter in Tech",
-            "women": "Frauen",
-            "men": "Männer",
-            "origin": "Herkunft"
-        },
-        "searchBar": {
-            "search": "Finden",
-            "iSearchFor": "Ich suche nach",
-            "jobsIn": "Jobs in",
-            "searchAllJobs": "Alle aktuellen Jobs in Tech anzeigen"
-        },
-        "filter": {
-            "position": {
-                "all": "Alle Positionen",
-                "fullTime": "Vollzeit",
-                "partTime": "Halbtags"
-            },
-            "cities": {
-                "all" : "Alle Standorte",
-                "munich": "München",
-                "vienna": "Wien",
-                "berlin": "Berlin"
-            },
-            "company": {
-                "all": "Alle Firmen",
-                "is24": "ImmobilienScout24",
-                "as24": "AutoScout24",
-                "s24": "Scout24"
-            },
-            "department": {
-                "all": "Alle Bereiche"
-            }
-        },
-        "iconSocial": {
-            "title":"WeCare",
-            "text":"Soziales Engagement gehört für Scout24 seit vielen Jahren selbstverständlich zur Unternehmenskultur. Hier kannst du mehr dazu lesen."
-        },
-        "iconTechBlog": {
-            "title": "Unser Tech-Blog",
-            "text": "Erfahre hier was unsere Scouts zum Thema Tech aktuell bewegt."
-        },
-        "iconScout": {
-            "title": "Social Media",
-            "text": "Schaue dir unsere Social Media Activitäten an."
-        },
-        "hideJobs": "Jobs verbergen"
+  "de": {
+    "application": {
+      "title": "Tolle app mit i18n"
     },
-    "en": {
-        "application": {
-            "title": "Awesome app with i18n!"
-        },
-        "diversity": {
-            "headline": "A look at our current diversity numbers",
-            "genderChart": "Gender in Tech",
-            "women": "Women",
-            "men": "Men",
-            "origin": "Origins"
-        },
-        "searchBar": {
-            "search": "Find",
-            "iSearchFor": "I'm looking for",
-            "jobsIn": "jobs in",
-            "searchAllJobs": "Show all current Jobs in Tech"
-        },
-        "filter": {
-            "position": {
-                "all": "All positions",
-                "fullTime": "full-time",
-                "partTime": "part-time"
-            },
-            "cities": {
-                "all": "All cities",
-                "munich": "Munich",
-                "vienna": "Vienna",
-                "berlin": "Berlin"
-            },
-            "company": {
-                "all": "All companies",
-                "is24": "ImmobilienScout24",
-                "as24": "AutoScout24",
-                "s24": "Scout24"
-            },
-            "department": {
-                "all": "All departments"
-            }
-        },
-        "iconSocial": {
-            "title":"WeCare",
-            "text":"For many years, social commitment has been part of Scout24's corporate culture."
-        },
-        "iconTechBlog": {
-            "title": "Our Tech-Blog",
-            "text": "Find out whats currently happening in our tech organisation."
-        },
-        "iconScout": {
-            "title": "Social Media",
-            "text": "Find out about our social activities."
-        },
-        "hideJobs": "Hide jobs"
-    }
+    "diversity": {
+      "headline": "Ein Blick auf unsere aktuelle Vielfältigkeit",
+      "genderChart": "Geschlechter in Tech",
+      "women": "Frauen",
+      "men": "Männer",
+      "origin": "Herkunft"
+    },
+    "searchBar": {
+      "search": "Finden",
+      "iSearchFor": "Ich suche nach",
+      "jobsIn": "Jobs in",
+      "searchAllJobs": "Alle aktuellen Jobs in Tech anzeigen"
+    },
+    "filter": {
+      "position": {
+        "all": "Alle Positionen",
+        "fullTime": "Vollzeit",
+        "partTime": "Halbtags"
+      },
+      "cities": {
+        "all": "Alle Standorte",
+        "munich": "München",
+        "vienna": "Wien",
+        "berlin": "Berlin"
+      },
+      "company": {
+        "all": "Alle Firmen",
+        "is24": "ImmobilienScout24",
+        "as24": "AutoScout24",
+        "s24": "Scout24"
+      },
+      "department": {
+        "all": "Alle Bereiche"
+      }
+    },
+    "agile": {
+      "title": "Agile",
+      "text": "Neugierde, Nach neuen Wegen suchen, Zügige Ausführung, Stetige Verbesserung"
+    },
+    "oneTeam": {
+      "title": "One Team",
+      "text": "Offenheit, Verantwortung, Respekt, Enthusiasmus"
+    },
+    "dataDriven": {
+      "title": "Data driven",
+      "text": "Analytik, Erkenntnisse erzeugen, Nutzer an erster Stelle, Datensicherheit"
+    },
+    "winning": {
+      "title": "Winning",
+      "text": "Unternehmergeist, Großes und mutiges Denken, Durchsetzungsfähigkeit, Belastbarkeit"
+    },
+    "hideJobs": "Jobs verbergen"
+  },
+  "en": {
+    "application": {
+      "title": "Awesome app with i18n!"
+    },
+    "diversity": {
+      "headline": "A look at our current diversity numbers",
+      "genderChart": "Gender in Tech",
+      "women": "Women",
+      "men": "Men",
+      "origin": "Origins"
+    },
+    "searchBar": {
+      "search": "Find",
+      "iSearchFor": "I'm looking for",
+      "jobsIn": "jobs in",
+      "searchAllJobs": "Show all current Jobs in Tech"
+    },
+    "filter": {
+      "position": {
+        "all": "All positions",
+        "fullTime": "full-time",
+        "partTime": "part-time"
+      },
+      "cities": {
+        "all": "All cities",
+        "munich": "Munich",
+        "vienna": "Vienna",
+        "berlin": "Berlin"
+      },
+      "company": {
+        "all": "All companies",
+        "is24": "ImmobilienScout24",
+        "as24": "AutoScout24",
+        "s24": "Scout24"
+      },
+      "department": {
+        "all": "All departments"
+      }
+    },
+    "agile": {
+      "title": "Agile",
+      "text": "Curiosity, Out of the box thinking, Fast delivery, Continuous improvement"
+    },
+    "oneTeam": {
+      "title": "One Team",
+      "text": "Openness, Ownership, Respect, Enthusiasm"
+    },
+    "dataDriven": {
+      "title": "Data driven",
+      "text": "Analytics, Create insights, Consumer first, Data security"
+    },
+    "winning": {
+      "title": "Winning",
+      "text": "Entrepreneurship, Think big & bold, Assertivness, Resilience"
+    },
+    "hideJobs": "Hide jobs"
+  }
 }

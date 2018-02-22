@@ -10,7 +10,7 @@ class EntryPage extends React.Component {
     return (
       <Page>
         <CoreValues/>
-        <h1 className="title font-h2 margin-bottom-none padding-vertical-xl">Working at Scout</h1>
+        <h1 className="grid-item margin-top-xl title font-h2 margin-bottom-none padding-vertical-xl">Working at Scout</h1>
         <div className="grid-item one-whole margin-bottom-xl">
           <div className="grid grid-flex grid-align-stretch gutter-l">
             <div className="grid-item palm-one-whole two-thirds">

@@ -73,7 +73,7 @@ class AllPositions extends React.Component {
 
     return (
       <Page>
-        <h1 className="title font-h2 margin-bottom-none padding-vertical-xl">Current Job Openings</h1>
+        <h1 className="grid-item one-whole title font-h2 margin-bottom-none padding-vertical-xl">Current Job Openings</h1>
         <div className="grid gutter-xl">
           <div className="grid-item one-whole">
             <div className="grid gutter-xl">

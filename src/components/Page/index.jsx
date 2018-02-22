@@ -13,7 +13,9 @@ class Page extends React.PureComponent {
           <Header/>
           <Cover/>
           <div className="content-wrapper">
-            {this.props.children}
+            <div className="grid">
+              {this.props.children}
+            </div>
           </div>
         </div>
         <Footer/>

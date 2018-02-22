@@ -1,19 +1,19 @@
 .icon-cockpit {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .icons {
-   color: #3d648c;
+  color: #ff7500;
 }
 
 .icon-link:hover, .icon-link:visited, .icon-link:link {
-   color: #343434;
-   text-decoration: none;
+  color: #343434;
+  text-decoration: none;
 }
 
 .divider {
-    border: 1px solid #e0e0e0;
-    width: 50%;
-    margin: 70px auto 0 auto;
+  border: 1px solid #e0e0e0;
+  width: 50%;
+  margin: 70px auto 0 auto;
 }
