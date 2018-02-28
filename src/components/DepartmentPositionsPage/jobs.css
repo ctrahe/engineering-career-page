@@ -38,6 +38,9 @@
 .detail-filters-select{
   padding-right: 50px;
 }
+.filter-label{
+  font-size: 1.4rem;
+}
 .fa{
   padding-right: 5px;
 }

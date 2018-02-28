@@ -6,12 +6,12 @@
     },
     "filter": {
       "position": {
-        "all": "Alle Positionen",
+        "all": "Alle",
         "fullTime": "Vollzeit",
         "partTime": "Halbtags"
       },
       "cities": {
-        "all": "Alle Standorte",
+        "all": "Alle",
         "munich": "München",
         "vienna": "Wien",
         "berlin": "Berlin"
@@ -23,7 +23,7 @@
         "s24": "Scout24"
       },
       "department": {
-        "all": "Alle Bereiche"
+        "all": "Alle"
       }
     },
     "agile": {
@@ -80,24 +80,24 @@
     },
     "filter": {
       "position": {
-        "all": "All positions",
+        "all": "All",
         "fullTime": "full-time",
         "partTime": "part-time"
       },
       "cities": {
-        "all": "All cities",
+        "all": "All",
         "munich": "Munich",
         "vienna": "Vienna",
         "berlin": "Berlin"
       },
       "company": {
-        "all": "All companies",
+        "all": "All",
         "is24": "ImmobilienScout24",
         "as24": "AutoScout24",
         "s24": "Scout24"
       },
       "department": {
-        "all": "All departments"
+        "all": "All"
       }
     },
     "agile": {
