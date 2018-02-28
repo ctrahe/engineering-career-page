@@ -16,6 +16,7 @@ Using [Teamcity](https://teamcity.rz.is/project.html?projectId=EngineeringCareer
  the files are build to a static web application, which is hosted on S3.
  
 ## Dependencies
+
 Current job openings are requested from the Greenhouse API for Scout24.
  
  
