@@ -2,14 +2,19 @@
   height: 51px;
 }
 
-.header-line-height {
+.header {
   line-height: 0;
+  margin-left: 8px;
 }
 
 .languages a {
   color: #969696;
   cursor: pointer;
-  padding-left: 15px;
+  padding-left: 25px;
+}
+
+.languages .selected{
+  color: #ff7500;
 }
 
 @media only screen and (min-width: 669px) and (max-width: 1013px) {
