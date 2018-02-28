@@ -6,6 +6,7 @@ import Cover from '../Cover';
 import WorkingAtScout from '../sharedComponents/WorkingAtScout';
 import {getJobAds} from '../../utils/GreenhouseApi';
 import './allPositions.css';
+import {Translate} from 'react-i18nify';
 
 class AllPositions extends React.Component {
 
@@ -35,7 +36,7 @@ class AllPositions extends React.Component {
             <div className="border padding-horizontal-m padding-vertical-l">
               <p className="font-m">{item.name}</p>
               <span className="font-xxl font-light padding-right-s">{item.count}</span>
-              <span className="font-s font-lightgray">positions</span>
+              <span className="font-s font-lightgray"><Translate value="jobOpenings.positions"/></span>
             </div>
           </Link>
         </div>
@@ -74,7 +75,7 @@ class AllPositions extends React.Component {
   render() {
     return (
       <Page cover={<Cover phrase={<p>Do you want to be part of our team?<br/>We are looking forward to hearing from you!</p>}/>}>
-        <h1 className="grid-item one-whole title font-h2 margin-bottom-none padding-vertical-xl">Current Job Openings</h1>
+        <h1 className="grid-item one-whole title font-h2 margin-bottom-none padding-vertical-xl"><Translate value="jobOpenings.title"/></h1>
         <div className="grid gutter-xl">
           <div className="grid-item one-whole">
             <div className="grid gutter-xl">

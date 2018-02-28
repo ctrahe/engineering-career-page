@@ -1,5 +1,9 @@
 {
   "de": {
+    "jobOpenings":{
+      "title": "Aktuelle Stellenangebote",
+      "positions": "offene Stellen"
+    },
     "filter": {
       "position": {
         "all": "Alle Positionen",
@@ -70,6 +74,10 @@
 
 
   "en": {
+    "jobOpenings": {
+      "title": "Current Job Openings",
+      "positions": "positions"
+    },
     "filter": {
       "position": {
         "all": "All positions",
