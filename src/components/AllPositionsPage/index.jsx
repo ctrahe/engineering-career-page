@@ -7,7 +7,7 @@ import WorkingAtScout from '../sharedComponents/WorkingAtScout';
 import {getJobAds} from '../../utils/GreenhouseApi';
 import './allPositions.css';
 
-class AllPositions extends React.Component {
+class AllPositions extends React.PureComponent {
 
   constructor(props) {
     super(props);
