@@ -4,7 +4,7 @@ import { I18n } from 'react-i18nify';
 
 import App from './App';
 import translations from './i18n.json'
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './utils/registerServiceWorker';
 import './index.css';
 
 I18n.setTranslations(translations);

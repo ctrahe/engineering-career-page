@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
 
-import { getJobAds } from '../../GreenhouseApi';
+import { getJobAds } from '../../utils/GreenhouseApi';
 import JobAdEntry from './JobAdEntry';
 import './jobList.css'
 
