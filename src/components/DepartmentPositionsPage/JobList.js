@@ -91,8 +91,8 @@ class JobList extends Component {
             <div className="jobs-container">
                 <div className="job-info palm-one-whole">
                   <span className="filter-label">Team</span>
-                  <select className="filterField" onChange={ (event) => this.applyFilter(event) } name="department">
-                    <option selected value="all"><Translate value="filter.department.all"/></option>
+                  <select defaultValue={this.state.department} className="filterField" onChange={ (event) => this.applyFilter(event) } name="department">
+                    <option value="all"><Translate value="filter.department.all"/></option>
                     <option value="Technology"><Translate value="Technology"/></option>
                     <option value="Infrastructure & Operations"><Translate value="Infrastructure & Operations"/></option>
                     <option value="Software Engineering"><Translate value="Software Engineering"/></option>
@@ -102,8 +102,8 @@ class JobList extends Component {
                 </div>
                <div className="job-info palm-one-whole">
                  <span className="filter-label"><Translate value="filter.company.title"/></span>
-                 <select className="filterField" name="company"  onChange={ (event) => this.applyFilter(event) }>
-                   <option selected value="all"><Translate value="filter.company.all"/></option>
+                 <select defaultValue="all" className="filterField" name="company"  onChange={ (event) => this.applyFilter(event) }>
+                   <option value="all"><Translate value="filter.company.all"/></option>
                    <option value="AutoScout24"><Translate value="filter.company.as24"/></option>
                    <option value="ImmobilienScout24"><Translate value="filter.company.is24"/></option>
                    <option value="Scout24"><Translate value="filter.company.s24"/></option>
@@ -111,8 +111,8 @@ class JobList extends Component {
               </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.cities.title"/></span>
-                <select className="filterField" name="city"  onChange={ (event) => this.applyFilter(event) } value={this.state.city}>
-                  <option selected value="all"><Translate value="filter.cities.all"/></option>
+                <select defaultValue="all" className="filterField" name="city"  onChange={ (event) => this.applyFilter(event) } value={this.state.city}>
+                  <option value="all"><Translate value="filter.cities.all"/></option>
                   <option value="Berlin"><Translate value="filter.cities.berlin"/></option>
                   <option value="Munich"><Translate value="filter.cities.munich"/></option>
                   <option value="Vienna"><Translate value="filter.cities.vienna"/></option>
@@ -120,8 +120,8 @@ class JobList extends Component {
               </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.position.title"/></span>
-                <select className="filterField" onChange={ (event) => this.applyFilter(event) } name="position">
-                  <option selected value="all"><Translate value="filter.position.all"/></option>
+                <select defaultValue="all" className="filterField" onChange={ (event) => this.applyFilter(event) } name="position">
+                  <option value="all"><Translate value="filter.position.all"/></option>
                   <option value="fulltime"><Translate value="filter.position.fullTime"/></option>
                   <option value="parttime"><Translate value="filter.position.partTime"/></option>
                 </select>
