@@ -101,7 +101,7 @@ class JobList extends Component {
                   </select>
                 </div>
                <div className="job-info palm-one-whole">
-                 <span className="filter-label">Company</span>
+                 <span className="filter-label"><Translate value="filter.company.title"/></span>
                  <select className="filterField" name="company"  onChange={ (event) => this.applyFilter(event) }>
                    <option selected value="all"><Translate value="filter.company.all"/></option>
                    <option value="AutoScout24"><Translate value="filter.company.as24"/></option>
@@ -110,7 +110,7 @@ class JobList extends Component {
                  </select>
               </div>
               <div className="job-info palm-one-whole">
-                <span className="filter-label">Location</span>
+                <span className="filter-label"><Translate value="filter.cities.title"/></span>
                 <select className="filterField" name="city"  onChange={ (event) => this.applyFilter(event) } value={this.state.city}>
                   <option selected value="all"><Translate value="filter.cities.all"/></option>
                   <option value="Berlin"><Translate value="filter.cities.berlin"/></option>
@@ -118,8 +118,8 @@ class JobList extends Component {
                   <option value="Vienna"><Translate value="filter.cities.vienna"/></option>
                 </select>
               </div>
-              <div className="job-info font-m palm-one-whole">
-                <span className="filter-label">Type of employment</span>
+              <div className="job-info palm-one-whole">
+                <span className="filter-label"><Translate value="filter.position.title"/></span>
                 <select className="filterField" onChange={ (event) => this.applyFilter(event) } name="position">
                   <option selected value="all"><Translate value="filter.position.all"/></option>
                   <option value="fulltime"><Translate value="filter.position.fullTime"/></option>

@@ -6,18 +6,21 @@
     },
     "filter": {
       "position": {
+        "title": "Art der Anstellung",
         "all": "Alle",
         "fullTime": "Vollzeit",
         "partTime": "Halbtags"
       },
       "cities": {
+        "title": "Ort",
         "all": "Alle",
         "munich": "München",
         "vienna": "Wien",
         "berlin": "Berlin"
       },
       "company": {
-        "all": "Alle Firmen",
+        "title": "Unternehmen",
+        "all": "Alle",
         "is24": "ImmobilienScout24",
         "as24": "AutoScout24",
         "s24": "Scout24"
@@ -80,17 +83,20 @@
     },
     "filter": {
       "position": {
+        "title": "Type of employment",
         "all": "All",
         "fullTime": "full-time",
         "partTime": "part-time"
       },
       "cities": {
+        "title": "Location",
         "all": "All",
         "munich": "Munich",
         "vienna": "Vienna",
         "berlin": "Berlin"
       },
       "company": {
+        "title": "Company",
         "all": "All",
         "is24": "ImmobilienScout24",
         "as24": "AutoScout24",
