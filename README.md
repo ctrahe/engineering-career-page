@@ -1,5 +1,7 @@
-# Engineering Career Page
+# Career Page
 This project was created during the **Future-Hackdays** at IS24. It's a simple ReactJs webapplication that serves a modern career page specially for the engineering department at Scout24.
+
+After some improvements, it is now turned into a general career page.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
