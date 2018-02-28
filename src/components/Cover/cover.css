@@ -15,8 +15,14 @@
   background-size: cover;
   width: 100%;
   height: 400px;
-  background: url('./../../images/cover-photo.png');
   filter: brightness(70%);
+}
+.general-image{
+  background: url('./../../images/cover-photo.png');
+}
+.department-image{
+  background: url('./../../images/post-it.png');
+  background-size:cover
 }
 
 .absolute-container {

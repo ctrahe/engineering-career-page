@@ -11,7 +11,8 @@ class EntryPage extends React.Component {
 
   render() {
     return (
-      <Page cover={<Cover phrase={<p>Inspiring your best decisions.<br/>We connect people, cars and homes.</p>}
+      <Page cover={<Cover image="cover"
+                          phrase={<p>Inspiring your best decisions.<br/>We connect people, cars and homes.</p>}
                           button={<Button/>}/>}>
         <CoreValues/>
         <h1 className="grid-item margin-top-xl title font-h2 margin-bottom-none padding-vertical-xl">Working at

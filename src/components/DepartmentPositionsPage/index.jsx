@@ -14,7 +14,7 @@ class DepartmentPositions extends React.Component {
   render() {
     console.log(this.props);
    return (
-     <Page cover={<Cover phrase={this.state.department} />}>
+     <Page cover={<Cover  image="department" phrase={this.state.department} />}>
        <div className="grid-item one-whole">
          <JobList department={this.state.department}/>
        </div>

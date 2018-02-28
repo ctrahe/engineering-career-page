@@ -74,7 +74,7 @@ class AllPositions extends React.Component {
 
   render() {
     return (
-      <Page cover={<Cover phrase={<p>Do you want to be part of our team?<br/>We are looking forward to hearing from you!</p>}/>}>
+      <Page cover={<Cover image="cover" phrase={<p>Do you want to be part of our team?<br/>We are looking forward to hearing from you!</p>}/>}>
         <h1 className="grid-item one-whole title font-h2 margin-bottom-none padding-vertical-xl"><Translate value="jobOpenings.title"/></h1>
         <div className="grid gutter-xl">
           <div className="grid-item one-whole">

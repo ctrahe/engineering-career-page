@@ -10,7 +10,8 @@ class Cover extends React.PureComponent {
 
   static propTypes = {
     phrase: PropTypes.object.isRequired,
-    button: PropTypes.node
+    button: PropTypes.node,
+    image: PropTypes.string
   };
 
   static defaultProps = {
@@ -23,7 +24,7 @@ class Cover extends React.PureComponent {
         {/*<video autoPlay loop muted className="palm-hide cover-video">*/}
         {/*<source src={video}  type="video/mp4" />*/}
         {/*</video>*/}
-        <div className="cover-image"/>
+        <div className={(this.props.image ==='cover' ? 'general-image cover-image' : 'department-image cover-image')}/>
         <div className="absolute-container">
           <div className="cover-phrase">
             {this.props.phrase}
