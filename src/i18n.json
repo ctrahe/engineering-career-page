@@ -1,11 +1,5 @@
 {
   "de": {
-    "searchBar": {
-      "search": "Finden",
-      "iSearchFor": "Ich suche nach",
-      "jobsIn": "Jobs in",
-      "searchAllJobs": "Alle aktuellen Jobs in Tech anzeigen"
-    },
     "filter": {
       "position": {
         "all": "Alle Positionen",
@@ -75,12 +69,6 @@
 
 
   "en": {
-    "searchBar": {
-      "search": "Find",
-      "iSearchFor": "I'm looking for",
-      "jobsIn": "jobs in",
-      "searchAllJobs": "Show all current Jobs in Tech"
-    },
     "filter": {
       "position": {
         "all": "All positions",

@@ -13,13 +13,6 @@ import './index.css';
 
 class App extends Component {
 
-  constructor(props) {
-      super(props);
-      this.state = {
-        jobAds: []
-      };
-  }
-
   render() {
     return (
       <Router>
