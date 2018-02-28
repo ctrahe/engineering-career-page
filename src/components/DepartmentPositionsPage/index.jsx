@@ -6,13 +6,13 @@ import JobList from "./JobList";
 class DepartmentPositions extends React.Component {
   constructor(props) {
     super(props);
+    let department = this.props.location.pathname.split("/");
     this.state = {
-      department: "Technology"
+      department: department[department.length-1]
     };
   }
 
   render() {
-    console.log(this.props);
    return (
      <Page cover={<Cover  image="department" phrase={this.state.department} />}>
        <div className="grid-item one-whole">
