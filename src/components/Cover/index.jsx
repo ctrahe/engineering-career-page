@@ -1,17 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
+import React, { Component } from 'react';
 import './cover.css';
-// import video from './../../videos/CareerPageVideo-cover.mp4';
-// import VideoImagePalm from './../../images/video-image.png';
-// import ImageDesk from './../../images/social_media_header.jpg';
 
-class Cover extends React.PureComponent {
+class Cover extends Component {
 
   static propTypes = {
     phrase: PropTypes.object.isRequired,
     button: PropTypes.node,
-    image: PropTypes.string
+    image: PropTypes.string.isRequired
   };
 
   static defaultProps = {

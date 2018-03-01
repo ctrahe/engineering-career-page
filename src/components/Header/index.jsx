@@ -15,7 +15,9 @@ class Header extends React.Component {
 
   changeLocale(selectedLocale) {
     I18n.setLocale(selectedLocale, true);
-    this.state.selectedLanguage = selectedLocale;
+    this.setState({
+      selectedLanguage: selectedLocale
+    });
     this.forceUpdate();
   };
 

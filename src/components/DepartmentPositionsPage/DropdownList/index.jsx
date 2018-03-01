@@ -49,7 +49,7 @@ class DropdownList extends Component {
     var items = [];
     for (var i = 0; i < this.props.list.length; i++) {
       var item = this.props.list[i];
-      items.push(<div className={"list-item-wrapper"} onClick={this.select.bind(null, item)}>
+      items.push(<div className={"list-item-wrapper"} key={item} onClick={this.select.bind(null, item)}>
         <span className={"list-item"}>{item}</span>
       </div>);
     }

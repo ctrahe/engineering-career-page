@@ -25,22 +25,22 @@ class JobList extends Component {
 
     setSelected(selectedItem, dropDown) {
 
-      if (dropDown==1){
+      if (dropDown===1){
         this.setState({
           department: selectedItem
         });
       }
-      if (dropDown==2){
+      if (dropDown===2){
         this.setState({
           company: selectedItem
         });
       }
-      if (dropDown==3){
+      if (dropDown===3){
         this.setState({
           city: selectedItem
         });
       }
-      if (dropDown==4){
+      if (dropDown===4){
         this.setState({
           employmentType: selectedItem
         });
@@ -69,7 +69,6 @@ class JobList extends Component {
                   </div>;
       }
       else {
-        console.log(this.state.employmentType)
         return this.state.jobAds.jobs
           .filter(jobAd => (
             (
