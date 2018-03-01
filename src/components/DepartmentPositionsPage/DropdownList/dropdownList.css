@@ -1,3 +1,6 @@
+.dropdown-container{
+  position: relative;
+}
 .dropdown-display{
   height: 42px;
   border: solid 1px #e0e0e0;
@@ -12,23 +15,29 @@
 .dropdown-selected{
   margin: 10px;
   display: inline-block;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dropdown-list{
   visibility: hidden;
   height: 0px;
-}
-.list-item{
-  margin: 10px;
 }
 .list-item-wrapper:hover{
   background-color: #e0e0e0;
 }
 .list-item-wrapper{
   padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
   border-bottom: solid 1px #e0e0e0;
 }
 .dropdown-list-open{
   position: absolute;
   border: solid 1px #e0e0e0;
   background-color: white;
+  width: 100%;
 }

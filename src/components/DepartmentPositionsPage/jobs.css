@@ -16,11 +16,12 @@
 }
 .jobs-container{
   text-align: center;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   padding: 40px 0;
 }
 .job-info{
+  width: 25%;
   display: inline-block;
   vertical-align: top;
   padding: 10px;
@@ -38,6 +39,7 @@
 .filter-label{
   color: #747474;
   font-size: 1.4rem;
+  white-space:nowrap;
 }
 .job-city{
   color: #9b9b9b;
