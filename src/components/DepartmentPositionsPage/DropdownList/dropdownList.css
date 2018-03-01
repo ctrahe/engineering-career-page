@@ -15,6 +15,7 @@
 }
 .dropdown-list{
   visibility: hidden;
+  height: 0px;
 }
 .list-item{
   margin: 10px;
@@ -27,6 +28,7 @@
   border-bottom: solid 1px #e0e0e0;
 }
 .dropdown-list-open{
-  visibility: visible;
+  position: absolute;
   border: solid 1px #e0e0e0;
+  background-color: white;
 }

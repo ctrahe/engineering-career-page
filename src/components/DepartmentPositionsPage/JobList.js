@@ -15,10 +15,10 @@ class JobList extends Component {
             jobAds: null,
             department: this.props.department,
             departments:null,
-            city: props.city ? props.city : 'all',
-            company: 'all',
-            position: 'all',
-            employmentType: 'all'
+            city: props.city ? props.city : 'All',
+            company: 'All',
+            position: 'All',
+            employmentType: 'All'
         };
       this.setSelected = this.setSelected.bind(this);
     }
@@ -87,12 +87,12 @@ class JobList extends Component {
         return this.state.jobAds.jobs
           .filter(jobAd => (
             (
-              (this.state.city === 'all' ? true : jobAd.location.name.includes(this.state.city)) ||
+              (this.state.city === 'All' ? true : jobAd.location.name.includes(this.state.city)) ||
               (this.state.city === 'Munich' ? jobAd.location.name.includes('München') : false) ||
               (this.state.city === 'Vienna' ? jobAd.location.name.includes('Wien') : false)
             ) &&
             (
-              (this.state.position === 'all' ? true :
+              (this.state.position === 'All' ? true :
                   (this.state.position === 'parttime' ?
                       //Filter Parttime
                       (
@@ -107,9 +107,9 @@ class JobList extends Component {
                   )
               )
             ) &&
-            (this.state.department === 'all' ? true : jobAd.departments[0].name.includes(this.state.department)) &&
+            (this.state.department === 'All' ? true : jobAd.departments[0].name.includes(this.state.department)) &&
             (
-              this.state.company === 'all' ? true :
+              this.state.company === 'All' ? true :
                 this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase() === this.state.company.toLowerCase() :
                   jobAd.metadata[0].value.toLowerCase().includes(this.state.company.toLowerCase()))))
           .map((jobAd) => (
@@ -118,9 +118,9 @@ class JobList extends Component {
     }
 
     render() {
-      const locationList = ["Berlin", "Munchen", "Vienna"];
-      const employmentTypeList = ["Full-time", "Part-time"];
-      const companyList = ["ImmobilienScout24", "AutoScout24", "Scout24"];
+      const locationList = ["All", "Berlin", "Munich", "Vienna"];
+      const employmentTypeList = ["All","Full-time", "Part-time"];
+      const companyList = ["All","ImmobilienScout24", "AutoScout24", "Scout24"];
       const filteredJobAds = this.renderJobAds();
         return (
             <div className="jobs-container">
