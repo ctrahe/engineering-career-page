@@ -96,8 +96,9 @@ class JobList extends Component {
             (this.state.department === 'All' ? true : jobAd.departments[0].name.includes(this.state.department)) &&
             (
               this.state.company === 'All' ? true :
-                this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase() === this.state.company.toLowerCase() :
-                  jobAd.metadata[0].value.toLowerCase().includes(this.state.company.toLowerCase()))))
+                (this.state.company === 'ImmobilienScout24' ? jobAd.metadata[0].value.toLowerCase().includes('immobilien') : false) ||
+                (this.state.company === 'AutoScout24' ? jobAd.metadata[0].value.toLowerCase().includes('auto') : false) ||
+                (this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase() === this.state.company.toLowerCase() : false))))
           .map((jobAd) => (
             <JobAdEntry jobAd={jobAd} key={jobAd.id}/>));
       }
