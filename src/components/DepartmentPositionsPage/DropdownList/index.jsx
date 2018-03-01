@@ -16,7 +16,7 @@ class DropdownList extends Component {
     this.select = this.select.bind(this);
   }
   select(item) {
-    this.props.selected = item;
+    this.props.setSelected(item, this.props.dropdownNumber);
   };
 
   show() {
@@ -49,7 +49,7 @@ class DropdownList extends Component {
     var items = [];
     for (var i = 0; i < this.props.list.length; i++) {
       var item = this.props.list[i];
-      items.push(<div onClick={this.select.bind(null, item)}>
+      items.push(<div className={"list-item-wrapper"} onClick={this.select.bind(null, item)}>
         <span className={"list-item"}>{item}</span>
       </div>);
     }
@@ -59,6 +59,7 @@ class DropdownList extends Component {
 
 DropdownList.propTypes = {
   list: PropTypes.array,
+  dropdownNumber: PropTypes.number,
   selected: PropTypes.string
 };
 export default DropdownList;

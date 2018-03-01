@@ -18,8 +18,33 @@ class JobList extends Component {
             city: props.city ? props.city : 'all',
             company: 'all',
             position: 'all',
-            jobField: props.city ? props.city : ''
+            employmentType: 'all'
         };
+      this.setSelected = this.setSelected.bind(this);
+    }
+
+    setSelected(selectedItem, dropDown) {
+
+      if (dropDown==1){
+        this.setState({
+          department: selectedItem
+        });
+      }
+      if (dropDown==2){
+        this.setState({
+          company: selectedItem
+        });
+      }
+      if (dropDown==3){
+        this.setState({
+          city: selectedItem
+        });
+      }
+      if (dropDown==4){
+        this.setState({
+          employmentType: selectedItem
+        });
+      }
     }
 
     componentWillMount() {
@@ -101,19 +126,19 @@ class JobList extends Component {
             <div className="jobs-container">
                 <div className="job-info palm-one-whole">
                   <span className="filter-label">Team</span>
-                  <DropdownList list={this.createListOfDepartmentNames()} selected={this.state.department}/>
+                  <DropdownList list={this.createListOfDepartmentNames()} selected={this.state.department} dropdownNumber={1} setSelected = {this.setSelected}/>
                 </div>
                <div className="job-info palm-one-whole">
                  <span className="filter-label"><Translate value="filter.company.title"/></span>
-                 <DropdownList list={companyList} selected={companyList[0]}/>
+                 <DropdownList list={companyList}  selected={this.state.company} dropdownNumber={2}  setSelected = {this.setSelected}/>
                </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.cities.title"/></span>
-                <DropdownList list={locationList} selected={locationList[0]}/>
+                <DropdownList list={locationList} selected={this.state.city} dropdownNumber={3} setSelected = {this.setSelected}/>
               </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.position.title"/></span>
-                <DropdownList list={employmentTypeList} selected={employmentTypeList[0]}/>
+                <DropdownList list={employmentTypeList} selected={this.state.employmentType} dropdownNumber={4}  setSelected = {this.setSelected}/>
               </div>
                 <ul className="jobs-list">
                     { filteredJobAds }

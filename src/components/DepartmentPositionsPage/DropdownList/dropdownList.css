@@ -19,8 +19,12 @@
 .list-item{
   margin: 10px;
 }
-.list-item:hover{
+.list-item-wrapper:hover{
   background-color: #e0e0e0;
+}
+.list-item-wrapper{
+  padding: 5px;
+  border-bottom: solid 1px #e0e0e0;
 }
 .dropdown-list-open{
   visibility: visible;
