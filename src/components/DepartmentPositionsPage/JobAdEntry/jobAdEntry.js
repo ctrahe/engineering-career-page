@@ -1,5 +1,5 @@
 import React  from 'react';
-import './jobs.css'
+import './jobAdEntry.css'
 
 const JobAdEntry = (props) =>
   <a className="job-link" href={props.jobAd.absolute_url}>

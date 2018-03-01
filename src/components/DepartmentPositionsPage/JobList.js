@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
 
 import { getJobAds } from '../../utils/GreenhouseApi';
-import JobAdEntry from './JobAdEntry';
-import './jobList.css'
+import JobAdEntry from './JobAdEntry/jobAdEntry';
 import DropdownList from "./DropdownList";
+
+import './jobList.css'
 
 class JobList extends Component {
 
@@ -58,21 +59,6 @@ class JobList extends Component {
         this.state.jobAds.jobs.forEach(item => set.add(item.departments[0].name));
       }
       return Array.from(set);
-    }
-
-    applyFilter(event)  {
-        if (event.target.name === 'department') {
-            this.setState({ department: event.target.value })
-        }
-        else if (event.target.name === 'city') {
-            this.setState({ city: event.target.value })
-        }
-        else if (event.target.name === 'company') {
-            this.setState({ company: event.target.value })
-        }
-        else if (event.target.name === 'position') {
-            this.setState({ position: event.target.value })
-        }
     }
 
     renderJobAds() {
