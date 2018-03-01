@@ -5,7 +5,7 @@
       "positions": "offene Stellen"
     },
     "filter": {
-      "position": {
+      "employmentType": {
         "title": "Art der Anstellung",
         "all": "Alle",
         "fullTime": "Vollzeit",
@@ -82,7 +82,7 @@
       "positions": "positions"
     },
     "filter": {
-      "position": {
+      "employmentType": {
         "title": "Type of employment",
         "all": "All",
         "fullTime": "full-time",
