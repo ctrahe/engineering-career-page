@@ -22,9 +22,8 @@
 }
 .job-info{
   display: inline-block;
-  width: 25%;
-  vertical-align: middle;
-  padding-bottom: 10px;
+  vertical-align: top;
+  padding: 10px;
   text-align: left;
 }
 
@@ -37,6 +36,7 @@
   padding-right: 50px;
 }
 .filter-label{
+  color: #747474;
   font-size: 1.4rem;
 }
 .job-city{

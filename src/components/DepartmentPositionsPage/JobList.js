@@ -5,6 +5,7 @@ import { Translate } from 'react-i18nify';
 import { getJobAds } from '../../utils/GreenhouseApi';
 import JobAdEntry from './JobAdEntry';
 import './jobList.css'
+import DropdownList from "./DropdownList";
 
 class JobList extends Component {
 
@@ -13,6 +14,7 @@ class JobList extends Component {
         this.state = {
             jobAds: null,
             department: this.props.department,
+            departments:null,
             city: props.city ? props.city : 'all',
             company: 'all',
             position: 'all',
@@ -22,9 +24,15 @@ class JobList extends Component {
 
     componentWillMount() {
         getJobAds().then(jobs => {
-                this.setState({...this.state, jobAds: jobs});
-            }
-        );
+          this.setState({...this.state, jobAds: jobs});
+        });
+    }
+    createListOfDepartmentNames() {
+      const set = new Set();
+      if (this.state.jobAds) {
+        this.state.jobAds.jobs.forEach(item => set.add(item.departments[0].name));
+      }
+      return Array.from(set);
     }
 
     applyFilter(event)  {
@@ -85,46 +93,27 @@ class JobList extends Component {
     }
 
     render() {
-        const filteredJobAds = this.renderJobAds();
-
+      const locationList = ["Berlin", "Munchen", "Vienna"];
+      const employmentTypeList = ["Full-time", "Part-time"];
+      const companyList = ["ImmobilienScout24", "AutoScout24", "Scout24"];
+      const filteredJobAds = this.renderJobAds();
         return (
             <div className="jobs-container">
                 <div className="job-info palm-one-whole">
                   <span className="filter-label">Team</span>
-                  <select defaultValue={this.state.department} className="filterField" onChange={ (event) => this.applyFilter(event) } name="department">
-                    <option value="all"><Translate value="filter.department.all"/></option>
-                    <option value="Technology"><Translate value="Technology"/></option>
-                    <option value="Infrastructure & Operations"><Translate value="Infrastructure & Operations"/></option>
-                    <option value="Software Engineering"><Translate value="Software Engineering"/></option>
-                    <option value="Data Science & Analytics"><Translate value="Data Science & Analytics"/></option>
-                    <option value="Product Management & UX"><Translate value="Product Management & UX"/></option>
-                  </select>
+                  <DropdownList list={this.createListOfDepartmentNames()} selected={this.state.department}/>
                 </div>
                <div className="job-info palm-one-whole">
                  <span className="filter-label"><Translate value="filter.company.title"/></span>
-                 <select defaultValue="all" className="filterField" name="company"  onChange={ (event) => this.applyFilter(event) }>
-                   <option value="all"><Translate value="filter.company.all"/></option>
-                   <option value="AutoScout24"><Translate value="filter.company.as24"/></option>
-                   <option value="ImmobilienScout24"><Translate value="filter.company.is24"/></option>
-                   <option value="Scout24"><Translate value="filter.company.s24"/></option>
-                 </select>
-              </div>
+                 <DropdownList list={companyList} selected={companyList[0]}/>
+               </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.cities.title"/></span>
-                <select defaultValue="all" className="filterField" name="city"  onChange={ (event) => this.applyFilter(event) } value={this.state.city}>
-                  <option value="all"><Translate value="filter.cities.all"/></option>
-                  <option value="Berlin"><Translate value="filter.cities.berlin"/></option>
-                  <option value="Munich"><Translate value="filter.cities.munich"/></option>
-                  <option value="Vienna"><Translate value="filter.cities.vienna"/></option>
-                </select>
+                <DropdownList list={locationList} selected={locationList[0]}/>
               </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.position.title"/></span>
-                <select defaultValue="all" className="filterField" onChange={ (event) => this.applyFilter(event) } name="position">
-                  <option value="all"><Translate value="filter.position.all"/></option>
-                  <option value="fulltime"><Translate value="filter.position.fullTime"/></option>
-                  <option value="parttime"><Translate value="filter.position.partTime"/></option>
-                </select>
+                <DropdownList list={employmentTypeList} selected={employmentTypeList[0]}/>
               </div>
                 <ul className="jobs-list">
                     { filteredJobAds }

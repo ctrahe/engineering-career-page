@@ -1,0 +1,28 @@
+.dropdown-display{
+  height: 42px;
+  border: solid 1px #e0e0e0;
+  display: block;
+}
+.fa-angle-down{
+  float: right;
+  margin-right: 7px;
+  margin-top: 15px;
+  color: #8f8f8f;
+}
+.dropdown-selected{
+  margin: 10px;
+  display: inline-block;
+}
+.dropdown-list{
+  visibility: hidden;
+}
+.list-item{
+  margin: 10px;
+}
+.list-item:hover{
+  background-color: #e0e0e0;
+}
+.dropdown-list-open{
+  visibility: visible;
+  border: solid 1px #e0e0e0;
+}
