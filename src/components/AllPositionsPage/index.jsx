@@ -32,7 +32,7 @@ class AllPositions extends React.Component {
     if (this.state.jobAds) {
       return this.createJobOpeningItem().map((item, index) => (
         <div className="grid-item palm-one-whole lap-one-half desk-one-third" key={index}>
-          <Link to={/department-positions/ + this.removeWhitespaces(item.name)} className="positions-container">
+          <Link to={{pathname:`/department-positions/${this.removeWhitespaces(item.name)}`, department:item.name} } className="positions-container">
             <div className="border padding-horizontal-m padding-vertical-l">
               <p className="font-m">{item.name}</p>
               <span className="font-xxl font-light padding-right-s">{item.count}</span>

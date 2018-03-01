@@ -4,25 +4,15 @@ import Cover from '../Cover';
 import JobList from "./JobList";
 
 class DepartmentPositions extends React.Component {
-  constructor(props) {
-    super(props);
-    let department = this.props.location.pathname.split("/");
-    this.state = {
-      department: department[department.length-1]
-    };
-  }
-
   render() {
    return (
-     <Page cover={<Cover  image="department" phrase={this.state.department} />}>
+     <Page cover={<Cover  image="department" phrase={this.props.location.department || "All Departments"} />}>
        <div className="grid-item one-whole">
-         <JobList department={this.state.department}/>
+         <JobList department={this.props.location.department || "All"}/>
        </div>
      </Page>
-
    );
   }
-
 }
 
 export default DepartmentPositions;
