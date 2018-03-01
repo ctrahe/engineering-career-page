@@ -16,6 +16,7 @@ class Header extends React.Component {
   changeLocale(selectedLocale) {
     I18n.setLocale(selectedLocale, true);
     this.state.selectedLanguage = selectedLocale;
+    this.forceUpdate();
   };
 
   render() {
@@ -27,8 +28,8 @@ class Header extends React.Component {
           </div>
           <div className="grid-item one-half">
             <div className="float-right languages">
-              <a className={(this.state.selectedLanguage ==='de' ? 'selected' : '')} onClick={() => this.changeLocale('de')}>DE</a>
-              <a className={(this.state.selectedLanguage ==='en'  ? 'selected' : '')} onClick={() => this.changeLocale('en')}>EN</a>
+              <a className={(this.state.selectedLanguage === "de" ? "selected" : "")} onClick={() => this.changeLocale("de")}>DE</a>
+              <a className={(this.state.selectedLanguage === "en"  ? "selected" : "")} onClick={() => this.changeLocale("en")}>EN</a>
             </div>
           </div>
         </div>
