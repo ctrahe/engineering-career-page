@@ -12,7 +12,7 @@ class EntryPage extends React.Component {
 
   render() {
     return (
-      <Page cover={<Cover image="cover"
+      <Page cover={<Cover background="video"
                           phrase={<p>Inspiring your best decisions.<br/>We connect people, cars and homes.</p>}
                           button={<Button/>}/>}>
         <CoreValues/>
