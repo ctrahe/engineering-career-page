@@ -6,6 +6,9 @@ a.positions-container {
   color: #262626;
   text-decoration: none;
   display: block;
+  white-space:nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 
 a.positions-container:hover {
