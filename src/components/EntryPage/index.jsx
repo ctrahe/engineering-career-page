@@ -36,7 +36,7 @@ class EntryPage extends React.Component {
         </div>
 
         <div className="grid-item one-whole">
-          <div className="grid grid-flex gutter-xl">
+          <div className="grid grid-flex">
             <WorkingAtScout />
             <div className="grid-item one-whole">
               <Button/>
