@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Translate } from 'react-i18nify';
-import SocialMedia from '../SocialMedia'
-import { getJobAds } from '../../utils/GreenhouseApi';
-import JobAdEntry from './JobAdEntry/jobAdEntry';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Translate } from "react-i18nify";
+import SocialMedia from "../SocialMedia"
+import { getJobAds } from "../../utils/GreenhouseApi";
+import JobAdEntry from "./JobAdEntry/jobAdEntry";
 import DropdownList from "./DropdownList";
 
-import './jobList.css'
+import "./jobList.css"
 
 class JobList extends Component {
 
@@ -16,9 +16,9 @@ class JobList extends Component {
             jobAds: null,
             department: this.props.department,
             departments: null,
-            city: 'All',
-            company: 'All',
-            employmentType: 'All'
+            city: "All",
+            company: "All",
+            employmentType: "All"
         };
       this.setSelected = this.setSelected.bind(this);
     }
@@ -56,10 +56,13 @@ class JobList extends Component {
 
     createDropdownList(type) {
       let names = `item.${type}.name`
-      const set = new Set();'' +
+      const set = new Set();"" +
       set.add("All");
       if (this.state.jobAds) {
         this.state.jobAds.jobs.forEach(item => set.add(eval(names)));
+      }
+      if(type.includes("department")){
+        set.delete("Technology");
       }
       return Array.from(set);
     }
@@ -75,31 +78,32 @@ class JobList extends Component {
       else {
         return this.state.jobAds.jobs
           .filter(jobAd => (
-            (this.state.city === 'All' ? true : jobAd.location.name.includes(this.state.city))
+            (this.state.city === "All" ? true : jobAd.location.name.includes(this.state.city))
              &&
-              (this.state.employmentType === 'All' ? true :
-                  (this.state.employmentType === 'Part-time' ?
+              (this.state.employmentType === "All" ? true :
+                  (this.state.employmentType === "Part-time" ?
                       //Filter Parttime
                       (
-                        jobAd.title.toLowerCase().includes('intern') ||
-                        jobAd.title.toLowerCase().includes('praktik') ||
-                        jobAd.title.toLowerCase().includes('werkstudent')
+                        jobAd.title.toLowerCase().includes("intern") ||
+                        jobAd.title.toLowerCase().includes("praktik") ||
+                        jobAd.title.toLowerCase().includes("werkstudent")
                       ) :
                       //Filter Fulltime
                       (
-                        !jobAd.title.toLowerCase().includes('intern') &&
-                        !jobAd.title.toLowerCase().includes('praktik') &&
-                        !jobAd.title.toLowerCase().includes('werkstudent')
+                        !jobAd.title.toLowerCase().includes("intern") &&
+                        !jobAd.title.toLowerCase().includes("praktik") &&
+                        !jobAd.title.toLowerCase().includes("werkstudent")
                       )
                   )
               )
             &&
-            (this.state.department === 'All' ? true : jobAd.departments[0].name.includes(this.state.department)) &&
+            (this.state.department === "All" ? true : jobAd.departments[0].name.includes(this.state.department) ||
+            (this.state.department.toLowerCase().includes("software")? jobAd.departments[0].name.toLowerCase().includes("technology") : false)) &&
             (
-              this.state.company === 'All' ? true :
-                (this.state.company === 'ImmobilienScout24' ? jobAd.metadata[0].value.toLowerCase().includes('immobilien') : false) ||
-                (this.state.company === 'AutoScout24' ? jobAd.metadata[0].value.toLowerCase().includes('auto') : false) ||
-                (this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase().startsWith(this.state.company.toLowerCase()) : false))))
+              this.state.company === "All" ? true :
+                (this.state.company === "ImmobilienScout24" ? jobAd.metadata[0].value.toLowerCase().includes("immobilien") : false) ||
+                (this.state.company === "AutoScout24" ? jobAd.metadata[0].value.toLowerCase().includes("auto") : false) ||
+                (this.state.company === "Scout24" ? jobAd.metadata[0].value.toLowerCase().startsWith(this.state.company.toLowerCase()) : false))))
           .map((jobAd) => (
             <JobAdEntry jobAd={jobAd} key={jobAd.id}/>));
       }

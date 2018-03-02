@@ -70,11 +70,15 @@ class AllPositions extends React.Component {
     if (this.state.jobAds) {
       const names = this.createListOfDepartmentNames();
       names.forEach(name => {
-        items.push({
-          name: name,
-          count: this.calculateCount(name)
-        })
+          items.push({
+            name: name,
+            count: this.calculateCount(name)
+          })
       });
+      const softwarePosition = items.map(obj => obj.name.toLowerCase()).indexOf("software engineering");
+      const technologyPosition = items.map(obj => obj.name.toLowerCase()).indexOf("technology");
+      items[softwarePosition].count += items[technologyPosition].count
+      items.splice(technologyPosition,1);
     }
     return items;
   }
