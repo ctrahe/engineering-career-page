@@ -16,12 +16,9 @@ class Cover extends Component {
 
   render() {
     return (
-      <div className="grid-item one-whole">
-        {/*<video autoPlay loop muted className="palm-hide cover-video">*/}
-        {/*<source src={video}  type="video/mp4" />*/}
-        {/*</video>*/}
+      <div className="grid-item one-whole cover-wrapper">
         <div className={(this.props.image ==='cover' ? 'general-image cover-image' : 'department-image cover-image')}/>
-        <div className="absolute-container">
+        <div className="absolute-container grid-item one-whole">
           <div className="cover-phrase">
             {this.props.phrase}
           </div>

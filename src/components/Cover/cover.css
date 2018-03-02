@@ -9,7 +9,9 @@
   height: 350px;
   width: 100vw;
 }
-
+.cover-wrapper{
+  position: relative;
+}
 .cover-image {
   position: relative;
   background-size: cover;
@@ -27,9 +29,10 @@
 
 .absolute-container {
   position: absolute;
-  top: 22%;
-  left: 10%;
   width: 85%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 24px;
 }
 
 .cover-phrase {
