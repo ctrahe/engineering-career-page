@@ -3,7 +3,7 @@ import React from 'react'
 import './socialMedia.css'
 
 const SocialMedia = () =>
-  <socialMedia className="grid-item one-whole">
+  <SocialMedia className="grid-item one-whole">
     <div className="divider margin-vertical-l"/>
     <div className="social-media-links margin-bottom-m">
       <a target="_blank" href="https://www.linkedin.com/company/scout24-group" rel="noopener noreferrer" title="Linked In" className="linkedin"> </a>
@@ -15,6 +15,6 @@ const SocialMedia = () =>
     </div>
     <a className="block margin-bottom-s" target="_blank" href="http://blog.scout24.com/" rel="noopener noreferrer">Corporate Blog</a>
     <a className="block" target="_blank" href="http://techblog.scout24.com/" rel="noopener noreferrer">Tech Blog</a>
-  </socialMedia>;
+  </SocialMedia>;
 
 export default SocialMedia;
