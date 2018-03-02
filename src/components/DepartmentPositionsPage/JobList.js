@@ -53,20 +53,15 @@ class JobList extends Component {
           this.setState({...this.state, jobAds: jobs});
         });
     }
-    createListOfDepartmentNames() {
+
+    createDropdownList(type) {
+      let names = `item.${type}.name`
       const set = new Set();
       if (this.state.jobAds) {
-        this.state.jobAds.jobs.forEach(item => set.add(item.departments[0].name));
+        this.state.jobAds.jobs.forEach(item => set.add(eval(names)));
       }
       return Array.from(set);
     }
-  createListOfLocations() {
-    const set = new Set();
-    if (this.state.jobAds) {
-      this.state.jobAds.jobs.forEach(item => set.add(item.location.name));
-    }
-    return Array.from(set);
-  }
 
     renderJobAds() {
       if (!this.state.jobAds) {
@@ -117,7 +112,7 @@ class JobList extends Component {
             <div className="jobs-container">
                 <div className="job-info palm-one-whole">
                   <span className="filter-label">Team</span>
-                  <DropdownList list={this.createListOfDepartmentNames()} selected={this.state.department} dropdownNumber={1} setSelected = {this.setSelected}/>
+                  <DropdownList list={this.createDropdownList("departments[0]")} selected={this.state.department} dropdownNumber={1} setSelected = {this.setSelected}/>
                 </div>
                <div className="job-info palm-one-whole">
                  <span className="filter-label"><Translate value="filter.company.title"/></span>
@@ -125,7 +120,7 @@ class JobList extends Component {
                </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.cities.title"/></span>
-                <DropdownList list={this.createListOfLocations()} selected={this.state.city} dropdownNumber={3} setSelected = {this.setSelected}/>
+                <DropdownList list={this.createDropdownList("location")} selected={this.state.city} dropdownNumber={3} setSelected = {this.setSelected}/>
               </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.employmentType.title"/></span>
