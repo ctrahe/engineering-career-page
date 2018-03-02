@@ -15,9 +15,10 @@
   width: 10%;
 }
 .dropdown-selected{
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
   display: inline-block;
-  width: 85%;
+  width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
