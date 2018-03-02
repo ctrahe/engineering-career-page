@@ -82,12 +82,14 @@ class JobList extends Component {
                       //Filter Parttime
                       (
                         jobAd.title.toLowerCase().includes('intern') ||
-                        jobAd.title.toLowerCase().includes('praktik')
+                        jobAd.title.toLowerCase().includes('praktik') ||
+                        jobAd.title.toLowerCase().includes('werkstudent')
                       ) :
                       //Filter Fulltime
                       (
-                        !(jobAd.title.toLowerCase().includes('intern')) &&
-                        !jobAd.title.toLowerCase().includes('praktik')
+                        !jobAd.title.toLowerCase().includes('intern') &&
+                        !jobAd.title.toLowerCase().includes('praktik') &&
+                        jobAd.title.toLowerCase().includes('werkstudent')
                       )
                   )
               )
@@ -97,7 +99,7 @@ class JobList extends Component {
               this.state.company === 'All' ? true :
                 (this.state.company === 'ImmobilienScout24' ? jobAd.metadata[0].value.toLowerCase().includes('immobilien') : false) ||
                 (this.state.company === 'AutoScout24' ? jobAd.metadata[0].value.toLowerCase().includes('auto') : false) ||
-                (this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase() === this.state.company.toLowerCase() : false))))
+                (this.state.company === 'Scout24' ? jobAd.metadata[0].value.toLowerCase().startsWith(this.state.company.toLowerCase()) : false))))
           .map((jobAd) => (
             <JobAdEntry jobAd={jobAd} key={jobAd.id}/>));
       }
