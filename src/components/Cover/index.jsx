@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import './cover.css';
 import video from './../../videos/CareerPageVideo-cover.mp4';
-import VideoImagePalm from './../../images/video-image.png';
+import VideoImage from './../../images/video-image.png';
 
 class Cover extends Component {
 
@@ -34,9 +34,7 @@ class Cover extends Component {
   renderCoverBackground(){
       if (this.props.background === 'video'){
         return  <div>
-                  <div className="palm-only">
-                    <image src={VideoImagePalm}  />
-                  </div>
+                  <img src={VideoImage} className="desk-hide lap-hide  video-image"/>
                   <video autoPlay loop muted className="palm-hide cover-video">
                     <source src={video}  type="video/mp4"/>
                   </video>
