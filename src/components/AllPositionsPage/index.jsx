@@ -29,7 +29,14 @@ class AllPositions extends React.Component {
   }
 
   renderJobs() {
-    if (this.state.jobAds) {
+    if (!this.state.jobAds) {
+      return <div className="spinner">
+        <div className="bounce1"> </div>
+        <div className="bounce2"> </div>
+        <div className="bounce3"> </div>
+      </div>;
+    }
+    else {
       return this.createJobOpeningItem().map((item, index) => (
         <div className="grid-item palm-one-whole lap-one-half desk-one-third" key={index}>
           <Link to={{pathname:`/department-positions/${this.removeWhitespaces(item.name)}`, department:item.name} } className="positions-container">
