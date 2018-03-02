@@ -2,7 +2,7 @@ import React  from 'react';
 import './jobAdEntry.css'
 
 const JobAdEntry = (props) =>
-  <a className="job-link" href={props.jobAd.absolute_url}>
+  <a className="job-link" href={props.jobAd.absolute_url}  target="_blank">
             <li className="job-entry" >
                 <div className="job-info one-whole job-title">
                   {props.jobAd && props.jobAd.title}
