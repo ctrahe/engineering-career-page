@@ -26,6 +26,7 @@ class JobList extends Component {
     setSelected(selectedItem, dropDown) {
 
       if (dropDown===1){
+        this.props.setSelectedDepartment(selectedItem);
         this.setState({
           department: selectedItem
         });
@@ -63,9 +64,9 @@ class JobList extends Component {
     renderJobAds() {
       if (!this.state.jobAds) {
           return <div className="spinner">
-                      <div className="bounce1"></div>
-                      <div className="bounce2"></div>
-                      <div className="bounce3"></div>
+                      <div className="bounce1"> </div>
+                      <div className="bounce2"> </div>
+                      <div className="bounce3"> </div>
                   </div>;
       }
       else {
