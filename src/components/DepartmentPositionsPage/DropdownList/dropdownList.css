@@ -3,19 +3,21 @@
 }
 .dropdown-display{
   height: 42px;
+  cursor: pointer;
   border: solid 1px #e0e0e0;
   display: block;
 }
 .fa-angle-down{
   float: right;
-  margin-right: 7px;
-  margin-top: 15px;
+  padding-right: 7px;
+  padding-top: 15px;
   color: #8f8f8f;
+  width: 10%;
 }
 .dropdown-selected{
-  margin: 10px;
+  padding: 10px;
   display: inline-block;
-  width: 80%;
+  width: 85%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -28,16 +30,19 @@
   background-color: #e0e0e0;
 }
 .list-item-wrapper{
-  padding: 5px;
+  cursor: pointer;
+  padding: 10px;
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
   text-overflow: ellipsis;
   border-bottom: solid 1px #e0e0e0;
 }
+
 .dropdown-list-open{
   position: absolute;
-  border: solid 1px #e0e0e0;
+  border-right: solid 1px #e0e0e0;
+  border-left: solid 1px #e0e0e0;
   background-color: white;
   width: 100%;
 }
