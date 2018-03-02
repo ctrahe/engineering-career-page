@@ -88,7 +88,7 @@ class JobList extends Component {
                       (
                         !jobAd.title.toLowerCase().includes('intern') &&
                         !jobAd.title.toLowerCase().includes('praktik') &&
-                        jobAd.title.toLowerCase().includes('werkstudent')
+                        !jobAd.title.toLowerCase().includes('werkstudent')
                       )
                   )
               )
