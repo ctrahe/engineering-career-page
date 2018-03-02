@@ -21,8 +21,8 @@ class Cover extends Component {
         <div className="absolute-container grid-item one-whole">
           <div className="cover-phrase">
             {this.props.phrase}
+            {this.props.button}
           </div>
-          {this.props.button}
         </div>
       </div>
     )

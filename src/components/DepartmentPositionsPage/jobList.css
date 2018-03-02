@@ -13,7 +13,9 @@
     width: 70px;
     text-align: center;
 }
-
+.jobs-list{
+  padding-top: 20px;
+}
 .spinner > div {
     width: 18px;
     height: 18px;
