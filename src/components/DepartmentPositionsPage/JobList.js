@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Translate } from 'react-i18nify';
-
+import SocialMedia from '../SocialMedia'
 import { getJobAds } from '../../utils/GreenhouseApi';
 import JobAdEntry from './JobAdEntry/jobAdEntry';
 import DropdownList from "./DropdownList";
@@ -129,6 +129,8 @@ class JobList extends Component {
                 <ul className="jobs-list">
                     { filteredJobAds }
                 </ul>
+              <SocialMedia/>
+
             </div>
         );
     }

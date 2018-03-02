@@ -1,0 +1,59 @@
+
+.divider {
+  border: 1px solid #e0e0e0;
+}
+
+.social-media-links a {
+  font-family: FontAwesome;
+  color: #949494;
+  padding-right: 15px;
+  font-size: 30px;
+}
+
+.linkedin:before {
+  content: "\f08c";
+}
+
+.linkedin:hover:before {
+  color: #0976b4;
+}
+
+.xing:before {
+  content: "\f169";
+}
+
+.xing:hover:before {
+  color: #026466;
+}
+
+.twitter:before {
+  content: "\f081";
+}
+
+.twitter:hover:before {
+  color: #55acee;
+}
+
+.youtube:before {
+  content: "\f166";
+}
+
+.youtube:hover:before {
+  color: #e52d27;
+}
+
+.facebook:before {
+  content: "\f082";
+}
+
+.facebook:hover:before {
+  color: #3b5998;
+}
+
+.instagram:before {
+  content: "\f16d";
+}
+
+.instagram:hover:before {
+  color: #dd4b39;
+}

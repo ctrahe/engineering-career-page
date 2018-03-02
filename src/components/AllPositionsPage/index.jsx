@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
+import SocialMedia from '../SocialMedia'
 import Page from '../Page';
 import Cover from '../Cover';
 import WorkingAtScout from '../sharedComponents/WorkingAtScout';
@@ -84,6 +84,7 @@ class AllPositions extends React.Component {
           </div>
           <div className="grid-item one-whole">
             <WorkingAtScout />
+            <SocialMedia/>
           </div>
         </div>
       </Page>
