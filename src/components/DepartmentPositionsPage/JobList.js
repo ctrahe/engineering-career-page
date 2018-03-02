@@ -60,6 +60,13 @@ class JobList extends Component {
       }
       return Array.from(set);
     }
+  createListOfLocations() {
+    const set = new Set();
+    if (this.state.jobAds) {
+      this.state.jobAds.jobs.forEach(item => set.add(item.location.name));
+    }
+    return Array.from(set);
+  }
 
     renderJobAds() {
       if (!this.state.jobAds) {
@@ -72,11 +79,8 @@ class JobList extends Component {
       else {
         return this.state.jobAds.jobs
           .filter(jobAd => (
-            (
-              (this.state.city === 'All' ? true : jobAd.location.name.includes(this.state.city)) ||
-              (this.state.city === 'Munich' ? jobAd.location.name.includes('München') : false) ||
-              (this.state.city === 'Vienna' ? jobAd.location.name.includes('Wien') : false)
-            ) &&
+            (this.state.city === 'All' ? true : jobAd.location.name.includes(this.state.city))
+             &&
               (this.state.employmentType === 'All' ? true :
                   (this.state.employmentType === 'Part-time' ?
                       //Filter Parttime
@@ -106,7 +110,6 @@ class JobList extends Component {
     }
 
     render() {
-      const locationList = ["All", "Berlin", "Munich", "Vienna"];
       const employmentTypeList = ["All","Full-time", "Part-time"];
       const companyList = ["All","ImmobilienScout24", "AutoScout24", "Scout24"];
       const filteredJobAds = this.renderJobAds();
@@ -122,7 +125,7 @@ class JobList extends Component {
                </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.cities.title"/></span>
-                <DropdownList list={locationList} selected={this.state.city} dropdownNumber={3} setSelected = {this.setSelected}/>
+                <DropdownList list={this.createListOfLocations()} selected={this.state.city} dropdownNumber={3} setSelected = {this.setSelected}/>
               </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.employmentType.title"/></span>
