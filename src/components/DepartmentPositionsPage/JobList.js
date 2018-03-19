@@ -112,6 +112,7 @@ class JobList extends Component {
     render() {
       const employmentTypeList = ["All","Full-time", "Part-time"];
       const companyList = ["All","ImmobilienScout24", "AutoScout24", "Scout24"];
+      const cityList = ["Berlin", "Berlin/München", "Frankfurt am Main", "München", "Nordrhein-Westfalen", "Wien"];
       const filteredJobAds = this.renderJobAds();
         return (
             <div className="jobs-container">
@@ -125,7 +126,7 @@ class JobList extends Component {
                </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.cities.title"/></span>
-                <DropdownList list={this.createDropdownList("location")} selected={this.state.city} dropdownNumber={3} setSelected = {this.setSelected}/>
+                <DropdownList list={cityList} selected={this.state.city} dropdownNumber={3} setSelected = {this.setSelected}/>
               </div>
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.employmentType.title"/></span>
