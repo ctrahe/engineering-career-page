@@ -59,6 +59,7 @@ class JobList extends Component {
       const set = new Set();
       set.add("All");
       if (this.state.jobAds) {
+        // eslint-disable-next-line
         this.state.jobAds.jobs.forEach(item => set.add(eval(names)));
       }
       if(type.includes("department")){
@@ -87,25 +88,7 @@ class JobList extends Component {
               (this.state.city === 'Nordrhein-Westfalen' ? (jobAd.location.name.toLowerCase().includes('nrw') || jobAd.location.name.toLowerCase().includes('nordrhein')) : false) ||
               (this.state.city === 'Wien' ? (jobAd.location.name.toLowerCase().includes('wien') || jobAd.location.name.toLowerCase().includes('vienna') || jobAd.location.name.toLowerCase().includes('österreich')|| jobAd.location.name.toLowerCase().includes('austria')) : false)
 
-            )
-              &&
-              (this.state.employmentType === "All" ? true :
-                  (this.state.employmentType === "Part-time" ?
-                      //Filter Parttime
-                      (
-                        jobAd.title.toLowerCase().includes("intern") ||
-                        jobAd.title.toLowerCase().includes("praktik") ||
-                        jobAd.title.toLowerCase().includes("werkstudent")
-                      ) :
-                      //Filter Fulltime
-                      (
-                        !jobAd.title.toLowerCase().includes("intern") &&
-                        !jobAd.title.toLowerCase().includes("praktik") &&
-                        !jobAd.title.toLowerCase().includes("werkstudent")
-                      )
-                  )
-              )
-            &&
+            ) &&
             (this.state.department === "All" ? true : jobAd.departments[0].name.includes(this.state.department) ||
             (this.state.department.toLowerCase().includes("software")? jobAd.departments[0].name.toLowerCase().includes("technology") : false)) &&
             (
@@ -119,7 +102,6 @@ class JobList extends Component {
     }
 
     render() {
-      const employmentTypeList = ["All","Full-time", "Part-time"];
       const companyList = ["All","ImmobilienScout24", "AutoScout24", "Scout24"];
       const cityList = ["Berlin", "Berlin/München", "Frankfurt am Main", "München", "Nordrhein-Westfalen", "Wien"];
       const filteredJobAds = this.renderJobAds();
@@ -136,10 +118,6 @@ class JobList extends Component {
               <div className="job-info palm-one-whole">
                 <span className="filter-label"><Translate value="filter.cities.title"/></span>
                 <DropdownList list={cityList} selected={this.state.city} dropdownNumber={3} setSelected = {this.setSelected}/>
-              </div>
-              <div className="job-info palm-one-whole">
-                <span className="filter-label"><Translate value="filter.employmentType.title"/></span>
-                <DropdownList list={employmentTypeList} selected={this.state.employmentType} dropdownNumber={4}  setSelected = {this.setSelected}/>
               </div>
                 <ul className="jobs-list">
                     { filteredJobAds }
