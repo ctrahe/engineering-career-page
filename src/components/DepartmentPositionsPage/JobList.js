@@ -55,8 +55,8 @@ class JobList extends Component {
     }
 
     createDropdownList(type) {
-      let names = `item.${type}.name`
-      const set = new Set();"" +
+      let names = `item.${type}.name`;
+      const set = new Set();
       set.add("All");
       if (this.state.jobAds) {
         this.state.jobAds.jobs.forEach(item => set.add(eval(names)));

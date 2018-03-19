@@ -34,7 +34,7 @@ class Cover extends Component {
   renderCoverBackground(){
       if (this.props.background === 'video'){
         return  <div>
-                  <img src={VideoImage} className="desk-hide lap-hide  video-image"/>
+                  <img src={VideoImage} alt="Scout24 Video" className="desk-hide lap-hide  video-image"/>
                   <video autoPlay loop muted className="palm-hide cover-video">
                     <source src={video}  type="video/mp4"/>
                   </video>
