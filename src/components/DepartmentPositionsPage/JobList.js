@@ -84,7 +84,7 @@ class JobList extends Component {
               (this.state.city === 'Berlin/München' ? (jobAd.location.name.toLowerCase().includes('berlin') || jobAd.location.name.toLowerCase().includes('münchen')|| jobAd.location.name.toLowerCase().includes('munich')): false) ||
               (this.state.city === 'Frankfurt am Main' ? jobAd.location.name.toLowerCase().includes('frankfurt') : false) ||
               (this.state.city === 'München' ? (jobAd.location.name.toLowerCase().includes('münchen')|| jobAd.location.name.toLowerCase().includes('munich')) : false) ||
-              (this.state.city === 'Nordrhein-Westfalen' ? (jobAd.location.name.toLowerCase().includes('NRW') || jobAd.location.name.toLowerCase().includes('nordrhein')) : false) ||
+              (this.state.city === 'Nordrhein-Westfalen' ? (jobAd.location.name.toLowerCase().includes('nrw') || jobAd.location.name.toLowerCase().includes('nordrhein')) : false) ||
               (this.state.city === 'Wien' ? (jobAd.location.name.toLowerCase().includes('wien') || jobAd.location.name.toLowerCase().includes('vienna') || jobAd.location.name.toLowerCase().includes('österreich')|| jobAd.location.name.toLowerCase().includes('austria')) : false)
 
             )
