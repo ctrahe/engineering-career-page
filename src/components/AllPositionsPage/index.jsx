@@ -62,9 +62,15 @@ class AllPositions extends React.Component {
 
   calculateCount(name) {
     console.log(this.state.jobAds);
-    return this.state.jobAds.jobs.filter(job => {
-      return (job.departments[0].name === name && (!job.title.toLowerCase().includes("intern") && !job.title.toLowerCase().includes("praktik") && !job.title.toLowerCase().includes("werkstudent")))
-    }).length;
+    if(name !== 'Working Students/Interns'){
+      return this.state.jobAds.jobs.filter(job => {
+        return (job.departments[0].name === name && (!job.title.toLowerCase().includes("intern") && !job.title.toLowerCase().includes("praktik") && !job.title.toLowerCase().includes("werkstudent")))
+      }).length;
+    }
+    return this.state.jobAds.jobs.filter(job =>{
+      return job.title.toLowerCase().includes("intern") || job.title.toLowerCase().includes("praktik") || job.title.toLowerCase().includes("werkstudent")
+    }).length
+
   }
 
   createJobOpeningItem() {
