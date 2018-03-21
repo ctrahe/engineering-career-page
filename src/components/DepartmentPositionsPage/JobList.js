@@ -18,7 +18,6 @@ class JobList extends Component {
             departments: null,
             city: "All",
             company: "All",
-            employmentType: "All"
         };
       this.setSelected = this.setSelected.bind(this);
     }
@@ -39,11 +38,6 @@ class JobList extends Component {
       if (dropDown===3){
         this.setState({
           city: selectedItem
-        });
-      }
-      if (dropDown===4){
-        this.setState({
-          employmentType: selectedItem
         });
       }
     }

@@ -5,12 +5,6 @@
       "positions": "offene Stellen"
     },
     "filter": {
-      "employmentType": {
-        "title": "Art der Anstellung",
-        "all": "Alle",
-        "fullTime": "Vollzeit",
-        "partTime": "Halbtags"
-      },
       "cities": {
         "title": "Ort",
         "all": "Alle",
@@ -82,12 +76,6 @@
       "positions": "positions"
     },
     "filter": {
-      "employmentType": {
-        "title": "Type of employment",
-        "all": "All",
-        "fullTime": "full-time",
-        "partTime": "part-time"
-      },
       "cities": {
         "title": "Location",
         "all": "All",
