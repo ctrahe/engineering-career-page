@@ -58,6 +58,7 @@ class JobList extends Component {
       }
       if(type.includes("department")){
         set.delete("Technology");
+        set.add("Working Students/Interns");
       }
       return Array.from(set);
     }
