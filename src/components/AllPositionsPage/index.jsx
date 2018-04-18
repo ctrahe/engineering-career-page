@@ -61,7 +61,6 @@ class AllPositions extends React.Component {
   }
 
   calculateCount(name) {
-    console.log(this.state.jobAds);
     if(name !== 'Working Students/Interns'){
       return this.state.jobAds.jobs.filter(job => {
         return (job.departments[0].name === name && (!job.title.toLowerCase().includes("intern") && !job.title.toLowerCase().includes("praktik") && !job.title.toLowerCase().includes("werkstudent")))
@@ -85,7 +84,9 @@ class AllPositions extends React.Component {
       });
       const softwarePosition = items.map(obj => obj.name.toLowerCase()).indexOf("software engineering");
       const technologyPosition = items.map(obj => obj.name.toLowerCase()).indexOf("technology");
-      items[softwarePosition].count += items[technologyPosition].count;
+      if(items[technologyPosition]) {
+        items[softwarePosition].count += items[technologyPosition].count;
+      }
       items.splice(technologyPosition,1);
     }
     return items;
