@@ -99,6 +99,7 @@ class JobList extends Component {
               this.state.company === "All" ? true :
                 (this.state.company === "ImmobilienScout24" ? jobAd.metadata[0].value.toLowerCase().includes("immobilien") : false) ||
                 (this.state.company === "AutoScout24" ? jobAd.metadata[0].value.toLowerCase().includes("auto") : false) ||
+                (this.state.company === "classmarkets" ? jobAd.metadata[0].value.toLowerCase().includes("classmarkets") : false) ||
                 (this.state.company === "Scout24" ? jobAd.metadata[0].value.toLowerCase().startsWith(this.state.company.toLowerCase()) : false))))
           .map((jobAd) => (
             <JobAdEntry jobAd={jobAd} key={jobAd.id}/>));
@@ -106,7 +107,7 @@ class JobList extends Component {
     }
 
     render() {
-      const companyList = ["All","ImmobilienScout24", "AutoScout24", "Scout24"];
+      const companyList = ["All","ImmobilienScout24", "AutoScout24", "Scout24", "classmarkets"];
       const cityList = ["Berlin", "Berlin/München", "Frankfurt am Main", "München", "Nordrhein-Westfalen", "Wien"];
       const filteredJobAds = this.renderJobAds();
         return (
