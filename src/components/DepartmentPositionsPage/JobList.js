@@ -75,32 +75,33 @@ class JobList extends Component {
         return this.state.jobAds.jobs
           .filter(jobAd => (
             (
-              (this.state.city === 'All' ? true : jobAd.location.name.includes(this.state.city)) ||
-              (this.state.city === 'Berlin' ? jobAd.location.name.toLowerCase().includes('berlin') : false) ||
-              (this.state.city === 'Berlin/München' ? (jobAd.location.name.toLowerCase().includes('berlin') || jobAd.location.name.toLowerCase().includes('münchen')|| jobAd.location.name.toLowerCase().includes('munich')): false) ||
-              (this.state.city === 'Frankfurt am Main' ? jobAd.location.name.toLowerCase().includes('frankfurt') : false) ||
-              (this.state.city === 'München' ? (jobAd.location.name.toLowerCase().includes('münchen')|| jobAd.location.name.toLowerCase().includes('munich')) : false) ||
-              (this.state.city === 'Nordrhein-Westfalen' ? (jobAd.location.name.toLowerCase().includes('nrw') || jobAd.location.name.toLowerCase().includes('nordrhein')) : false) ||
-              (this.state.city === 'Wien' ? (jobAd.location.name.toLowerCase().includes('wien') || jobAd.location.name.toLowerCase().includes('vienna') || jobAd.location.name.toLowerCase().includes('österreich')|| jobAd.location.name.toLowerCase().includes('austria')) : false)
+             (this.state.city === 'All' ? true : jobAd.location.name.includes(this.state.city)) ||
+             (this.state.city === 'Berlin' ? jobAd.location.name.toLowerCase().includes('berlin') : false) ||
+             (this.state.city === 'Berlin/München' ? (jobAd.location.name.toLowerCase().includes('berlin') || jobAd.location.name.toLowerCase().includes('münchen')|| jobAd.location.name.toLowerCase().includes('munich')): false) ||
+             (this.state.city === 'Frankfurt am Main' ? jobAd.location.name.toLowerCase().includes('frankfurt') : false) ||
+             (this.state.city === 'München' ? (jobAd.location.name.toLowerCase().includes('münchen')|| jobAd.location.name.toLowerCase().includes('munich')) : false) ||
+             (this.state.city === 'Nordrhein-Westfalen' ? (jobAd.location.name.toLowerCase().includes('nrw') || jobAd.location.name.toLowerCase().includes('nordrhein')) : false) ||
+             (this.state.city === 'Wien' ? (jobAd.location.name.toLowerCase().includes('wien') || jobAd.location.name.toLowerCase().includes('vienna') || jobAd.location.name.toLowerCase().includes('österreich')|| jobAd.location.name.toLowerCase().includes('austria')) : false)
 
             ) &&
 
             (
-            this.state.department === "All" ? true : jobAd.departments[0].name.includes(this.state.department) ||
+            this.state.department === "All" ? true :
             (this.state.department.toLowerCase().includes("software")? jobAd.departments[0].name.toLowerCase().includes("technology") : false) ||
             (this.state.department.toLowerCase().includes("intern") ?  (jobAd.title.toLowerCase().includes("intern") || jobAd.title.toLowerCase().includes("praktik") || jobAd.title.toLowerCase().includes("werkstudent")) : false)
             )
             &&
-            (this.state.department.toLowerCase().includes("intern") ?  (jobAd.title.toLowerCase().includes("intern") || jobAd.title.toLowerCase().includes("praktik") || jobAd.title.toLowerCase().includes("werkstudent")) :
-              (!jobAd.title.toLowerCase().includes("intern") && !jobAd.title.toLowerCase().includes("praktik") && !jobAd.title.toLowerCase().includes("werkstudent")))
+            (this.state.department === "All" ? true : jobAd.departments[0].name.includes(this.state.department) ||
+             this.state.department.toLowerCase().includes("intern") ?  (jobAd.title.toLowerCase().includes("intern") || jobAd.title.toLowerCase().includes("praktik") || jobAd.title.toLowerCase().includes("werkstudent")) :
+             (!jobAd.title.toLowerCase().includes("intern") && !jobAd.title.toLowerCase().includes("praktik") && !jobAd.title.toLowerCase().includes("werkstudent")))
 
             &&
             (
               this.state.company === "All" ? true :
-                (this.state.company === "ImmobilienScout24" ? jobAd.metadata[0].value.toLowerCase().includes("immobilien") : false) ||
-                (this.state.company === "AutoScout24" ? jobAd.metadata[0].value.toLowerCase().includes("auto") : false) ||
-                (this.state.company === "classmarkets" ? jobAd.metadata[0].value.toLowerCase().includes("classmarkets") : false) ||
-                (this.state.company === "Scout24" ? jobAd.metadata[0].value.toLowerCase().startsWith(this.state.company.toLowerCase()) : false))))
+              (this.state.company === "ImmobilienScout24" ? jobAd.metadata[0].value.toLowerCase().includes("immobilien") : false) ||
+              (this.state.company === "AutoScout24" ? jobAd.metadata[0].value.toLowerCase().includes("auto") : false) ||
+              (this.state.company === "classmarkets" ? jobAd.metadata[0].value.toLowerCase().includes("classmarkets") : false) ||
+              (this.state.company === "Scout24" ? jobAd.metadata[0].value.toLowerCase().startsWith(this.state.company.toLowerCase()) : false))))
           .map((jobAd) => (
             <JobAdEntry jobAd={jobAd} key={jobAd.id}/>));
       }
