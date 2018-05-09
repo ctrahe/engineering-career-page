@@ -10,16 +10,16 @@ import "./jobList.css"
 
 class JobList extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            jobAds: null,
-            department: this.props.department,
-            departments: null,
-            city: "All",
-            company: "All",
-        };
-      this.setSelected = this.setSelected.bind(this);
+  constructor(props) {
+    super(props);
+    this.state = {
+        jobAds: null,
+        department: this.props.department,
+        departments: null,
+        city: "All",
+        company: "All",
+    };
+    this.setSelected = this.setSelected.bind(this);
     }
 
     setSelected(selectedItem, dropDown) {
