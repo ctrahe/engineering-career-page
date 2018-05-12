@@ -4,17 +4,32 @@ import SocialMedia from '../SocialMedia'
 import Page from '../Page';
 import Cover from '../Cover';
 import WorkingAtScout from '../sharedComponents/WorkingAtScout';
+import {getJobAds} from '../../utils/GreenhouseApi';
 import './allPositions.css';
 import {Translate} from 'react-i18nify';
 
 class AllPositions extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      jobAds: null
+    };
+  }
+
+  componentWillMount() {
+    getJobAds().then(jobs => {
+        this.setState({...this.state, jobAds: jobs});
+      }
+    );
+  };
 
   removeWhitespaces(item) {
     return item.replace(/\s+/g, '');
   }
 
   renderJobs() {
-    if (!this.props.jobAds) {
+    if (!this.state.jobAds) {
       return <div className="spinner">
         <div className="bounce1"> </div>
         <div className="bounce2"> </div>
@@ -38,15 +53,15 @@ class AllPositions extends React.Component {
 
   createListOfDepartmentNames() {
     const set = new Set();
-    if (this.props.jobAds) {
-      this.props.jobAds.jobs.forEach(item => set.add(item.departments[0].name));
+    if (this.state.jobAds) {
+      this.state.jobAds.jobs.forEach(item => set.add(item.departments[0].name));
     }
     return Array.from(set);
   }
 
   calculateCount(name) {
-    if (this.props.jobAds) {
-      return this.props.jobAds.jobs.filter(job => {
+    if (this.state.jobAds) {
+      return this.state.jobAds.jobs.filter(job => {
         return (job.departments[0].name === name)
       }).length;
     }
@@ -54,7 +69,7 @@ class AllPositions extends React.Component {
 
   createJobOpeningItem() {
     const items = [];
-    if (this.props.jobAds) {
+    if (this.state.jobAds) {
       const names = this.createListOfDepartmentNames();
       names.forEach(name => {
           items.push({
@@ -90,6 +105,7 @@ class AllPositions extends React.Component {
       </Page>
     );
   }
+
 }
 
 export default AllPositions;
