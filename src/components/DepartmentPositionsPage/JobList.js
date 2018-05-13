@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { Translate } from "react-i18nify";
 import SocialMedia from "../SocialMedia"
-import { getJobAds } from "../../utils/GreenhouseApi";
 import JobAdEntry from "./JobAdEntry/jobAdEntry";
 import DropdownList from "./DropdownList";
 
@@ -10,16 +8,15 @@ import "./jobList.css"
 
 class JobList extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-        jobAds: null,
-        department: this.props.department,
-        departments: null,
-        city: "All",
-        company: "All",
-    };
-    this.setSelected = this.setSelected.bind(this);
+    constructor(props) {
+        super(props);
+        this.state = {
+            department: this.props.department,
+            departments: null,
+            city: "All",
+            company: "All",
+        };
+      this.setSelected = this.setSelected.bind(this);
     }
 
     setSelected(selectedItem, dropDown) {
@@ -42,19 +39,15 @@ class JobList extends Component {
       }
     }
 
-    componentWillMount() {
-        getJobAds().then(jobs => {
-          this.setState({...this.state, jobAds: jobs});
-        });
-    }
-
     createDropdownList(type) {
+      const jobAds = JSON.parse(localStorage.getItem('localstorageJobAds') || "[]");
+
       let names = `item.${type}.name`;
       const set = new Set();
       set.add("All");
-      if (this.state.jobAds) {
+      if (jobAds) {
         // eslint-disable-next-line
-        this.state.jobAds.jobs.forEach(item => set.add(eval(names)));
+        jobAds.jobs.forEach(item => set.add(eval(names)));
       }
       if(type.includes("department")){
         set.delete("Technology");
@@ -63,7 +56,9 @@ class JobList extends Component {
     }
 
     renderJobAds() {
-      if (!this.state.jobAds) {
+      const jobAds = JSON.parse(localStorage.getItem('localstorageJobAds') || "[]");
+
+      if (!jobAds.jobs) {
           return <div className="spinner">
                       <div className="bounce1"> </div>
                       <div className="bounce2"> </div>
@@ -71,7 +66,7 @@ class JobList extends Component {
                   </div>;
       }
       else {
-        return this.state.jobAds.jobs
+        return jobAds.jobs
           .filter(jobAd => (
            ((this.state.city === 'All' ? true : jobAd.location.name.includes(this.state.city)) ||
            (this.state.city === 'Berlin' ? jobAd.location.name.toLowerCase().includes('berlin') : false) ||
@@ -121,9 +116,4 @@ class JobList extends Component {
         );
     }
 }
-
-JobList.propTypes = {
-    jobAds: PropTypes.array
-};
-
 export default JobList;
