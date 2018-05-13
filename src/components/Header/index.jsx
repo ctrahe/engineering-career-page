@@ -1,7 +1,7 @@
 import React from 'react'
 import { I18n } from 'react-i18nify';
 
-import logoScout24 from '../../images/scout24.png';
+import logoScout24 from '../../images/scout24.webp';
 import './header.css'
 
 class Header extends React.Component {

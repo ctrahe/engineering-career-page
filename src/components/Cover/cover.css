@@ -20,10 +20,10 @@
   filter: brightness(70%);
 }
 .general-image{
-  background: url('./../../images/cover-photo.png');
+  background: url('../../images/cover-photo.webp');
 }
 .department-image{
-  background: url('./../../images/post-it.png');
+  background: url('./../../images/post-it.webp');
   background-size:cover
 }
 

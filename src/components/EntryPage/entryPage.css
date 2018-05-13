@@ -1,5 +1,5 @@
 .foyer-img {
-  background: url('../../images/foyer.jpeg');
+  background: url('../../images/foyer.webp');
   background-size: cover;
   background-position-y: 45%;
   height: 100%;
@@ -7,14 +7,14 @@
 }
 
 .boat-img {
-  background: url('../../images/boat.jpg');
+  background: url('../../images/boat.webp');
   background-size: cover;
   height: 150px;
   width: 100%;
 }
 
 .run-img {
-  background: url('../../images/run.jpg');
+  background: url('../../images/run.webp');
   background-size: cover;
   height: 150px;
   width: 100%;
