@@ -24,9 +24,7 @@ class DepartmentPositions extends React.Component {
 
   reformatText = (department) => {
     if (department) {
-      let reformattedDepartment = department.toLowerCase().replace(/\s/g, '').replace('&', '-');
-      console.log('reformattedDepartment: ', reformattedDepartment);
-      return reformattedDepartment;
+      return department.toLowerCase().replace(/\s/g, '').replace('&', '-');
     } else return 'department-placeholder';
   };
 
