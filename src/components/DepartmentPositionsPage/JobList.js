@@ -21,18 +21,18 @@ class JobList extends Component {
 
     setSelected(selectedItem, dropDown) {
 
-      if (dropDown===1){
+      if (dropDown === 1){
         this.props.setSelectedDepartment(selectedItem);
         this.setState({
           department: selectedItem
         });
       }
-      if (dropDown===2){
+      if (dropDown === 2){
         this.setState({
           company: selectedItem
         });
       }
-      if (dropDown===3){
+      if (dropDown === 3){
         this.setState({
           city: selectedItem
         });

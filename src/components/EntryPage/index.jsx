@@ -6,7 +6,7 @@ import Cover from '../Cover';
 import Button from './Button';
 import CoreValues from './coreValues/CoreValues';
 import './entryPage.css';
-import WorkingAtScout from '../sharedComponents/WorkingAtScout';
+import WorkingAtScout from '../../sharedComponents/WorkingAtScout';
 
 class EntryPage extends React.Component {
 

@@ -5,13 +5,16 @@
   filter: blur(1px) brightness(70%);
   -webkit-filter: blur(1px) brightness(70%);
 }
-.video-image{
+
+.video-image {
   height: 350px;
   width: 100vw;
 }
-.cover-wrapper{
+
+.cover-wrapper {
   position: relative;
 }
+
 .cover-image {
   position: relative;
   background-size: cover;
@@ -19,12 +22,14 @@
   height: 400px;
   filter: brightness(70%);
 }
-.general-image{
+
+.general-image {
   background: url('../../images/cover-photo.webp');
 }
-.department-image{
+
+.department-image {
   background: url('./../../images/post-it.webp');
-  background-size:cover
+  background-size: cover;
 }
 
 .absolute-container {

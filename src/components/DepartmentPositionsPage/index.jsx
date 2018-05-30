@@ -1,7 +1,8 @@
 import React from 'react';
 import Page from '../Page';
 import Cover from '../Cover';
-import JobList from "./JobList";
+import JobList from './JobList';
+import './jobList.css';
 
 class DepartmentPositions extends React.Component {
   constructor(props) {
@@ -10,23 +11,35 @@ class DepartmentPositions extends React.Component {
   }
 
   setSelectedDepartment(department) {
-      this.setState({
-        department: department
-      });
+    this.setState({
+      department: department
+    });
   }
+
   componentWillMount() {
     this.setState({
       department: this.props.location.department
     });
   }
+
+  reformatText = (department) => {
+    if (department) {
+      let reformattedDepartment = department.toLowerCase().replace(/\s/g, '').replace('&', '-');
+      console.log('reformattedDepartment: ', reformattedDepartment);
+      return reformattedDepartment;
+    } else return 'department-placeholder';
+  };
+
   render() {
-   return (
-     <Page cover={<Cover  background="department" phrase={<p>{this.state.department==='All'? 'All Teams': this.state.department|| "All Teams"}</p>} />}>
-       <div className="grid-item one-whole">
-         <JobList department={this.state.department || "All"} setSelectedDepartment = {this.setSelectedDepartment}/>
-       </div>
-     </Page>
-   );
+    return (
+      <Page cover={<Cover background="department" departmentImage={this.reformatText(this.props.location.department)}
+                          phrase={
+                            <p>{this.state.department === 'All' ? 'All Teams' : this.state.department || "All Teams"}</p>}/>}>
+        <div className="grid-item one-whole">
+          <JobList department={this.state.department || "All"} setSelectedDepartment={this.setSelectedDepartment}/>
+        </div>
+      </Page>
+    );
   }
 }
 

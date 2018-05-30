@@ -9,7 +9,8 @@ class Cover extends Component {
   static propTypes = {
     phrase: PropTypes.object.isRequired,
     button: PropTypes.node,
-    background: PropTypes.string.isRequired
+    background: PropTypes.string.isRequired,
+    departmentImage: PropTypes.string
   };
 
   static defaultProps = {
@@ -17,7 +18,7 @@ class Cover extends Component {
   };
 
   render() {
-    const background = this.renderCoverBackground()
+    const background = this.renderCoverBackground();
     return (
       <div className="grid-item one-whole cover-wrapper">
         {background}
@@ -31,17 +32,17 @@ class Cover extends Component {
     )
   }
 
-  renderCoverBackground(){
-      if (this.props.background === 'video'){
+  renderCoverBackground() {
+      if (this.props.background === 'video') {
         return  <div>
-                  <img src={VideoImage} alt="Scout24 Video" className="desk-hide lap-hide  video-image"/>
+                  <img src={VideoImage} alt="Scout24 Video" className="desk-hide lap-hide video-image"/>
                   <video autoPlay loop muted className="palm-hide cover-video">
                     <source src={video}  type="video/mp4"/>
                   </video>
                 </div>;
       }
-      else{
-        return  <div className={(this.props.background ==='cover' ? 'general-image cover-image' : 'department-image cover-image')}/>;
+      else {
+        return  <div className={(this.props.background === 'cover' ? 'general-image cover-image' : this.props.departmentImage + ' cover-image')}/>;
 
       }
   }
