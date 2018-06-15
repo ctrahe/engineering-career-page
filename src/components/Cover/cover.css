@@ -19,12 +19,13 @@
   position: relative;
   background-size: cover;
   width: 100%;
-  height: 400px;
+  height: 450px;
   filter: brightness(70%);
 }
 
 .general-image {
-  background: url('../../images/cover-photo.webp');
+  background: url('../../images/header.jpg') no-repeat;
+  background-size: cover;
 }
 
 .department-image {
@@ -50,7 +51,12 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+
 @media only screen and (min-width: 669px) and (max-width: 1013px) {
+  .cover-image {
+    height: 400px;
+  }
+
   .cover-phrase {
     font-size: 35px;
     width: 100%;
