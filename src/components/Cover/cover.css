@@ -29,7 +29,7 @@
 }
 
 .department-image {
-  background: url('./../../images/post-it.webp');
+  background: url('../../images/post_it.webp');
   background-size: cover;
 }
 
