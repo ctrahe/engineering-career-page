@@ -51,16 +51,16 @@
 }
 
 .businessdevelopment-strategy {
-  background: url('../../images/post_it.webp');
+  background: url('../../images/business_development.webp');
   background-size: cover;
 }
 
 .sales-salesoperations {
-  background: url('../../images/post_it.webp');
+  background: url('../../images/sales_operations.webp');
   background-size: cover;
 }
 
-.corporatefunctions {
+.corporate-functions {
   background: url('../../images/corporate_functions.webp');
   background-size: cover;
 }
@@ -71,7 +71,7 @@
 }
 
 .infrastructure-operations {
-  background: url('../../images/post_it.webp');
+  background: url('../../images/infrastructure_operations.webp');
   background-size: cover;
 }
 
@@ -80,8 +80,8 @@
   background-size: cover;
 }
 
-.softwareengineering {
-  background: url('./../../images/softwareengineering.webp') no-repeat;
+.software-engineering {
+  background: url('../../images/software_engineering.webp') no-repeat;
   background-size: cover;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .productmanagement-ux {
-  background: url('../../images/post_it.webp');
+  background: url('../../images/productmanagement_UX.webp');
   background-size: cover;
 }
 
@@ -117,14 +117,14 @@
 
 
 @media only screen and (min-width: 1014px) {
-  .softwareengineering {
+  .software-engineering {
     background-position-y: -120px;
   }
 }
 
 
 @media only screen and (min-width: 669px) and (max-width: 1013px) {
-  .softwareengineering {
+  .software-engineering {
     background-position-y: -95px;
   }
 }
