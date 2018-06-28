@@ -41,7 +41,7 @@
 }
 
 .marketing-communications {
-  background: url('../../images/post_it.webp');
+  background: url('../../images/marketing_communications.webp');
   background-size: cover;
 }
 
@@ -60,7 +60,7 @@
   background-size: cover;
 }
 
-.corporate-functions {
+.corporatefunctions {
   background: url('../../images/corporate_functions.webp');
   background-size: cover;
 }
@@ -80,13 +80,13 @@
   background-size: cover;
 }
 
-.software-engineering {
+.softwareengineering {
   background: url('../../images/software_engineering.webp') no-repeat;
   background-size: cover;
 }
 
 .legal-finance {
-  background: url('../../images/post_it.webp');
+  background: url('../../images/legal_finance.webp');
   background-size: cover;
 }
 
@@ -117,14 +117,14 @@
 
 
 @media only screen and (min-width: 1014px) {
-  .software-engineering {
+  .softwareengineering {
     background-position-y: -120px;
   }
 }
 
 
 @media only screen and (min-width: 669px) and (max-width: 1013px) {
-  .software-engineering {
+  .softwareengineering {
     background-position-y: -95px;
   }
 }
