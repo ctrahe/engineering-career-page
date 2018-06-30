@@ -23,22 +23,6 @@
         "all": "Alle"
       }
     },
-    "agile": {
-      "title": "Agile",
-      "text": "Neugierde, Nach neuen Wegen suchen, Zügige Ausführung, Stetige Verbesserung"
-    },
-    "oneTeam": {
-      "title": "One Team",
-      "text": "Offenheit, Verantwortung, Respekt, Enthusiasmus"
-    },
-    "dataDriven": {
-      "title": "Data driven",
-      "text": "Analytik, Erkenntnisse erzeugen, Nutzer an erster Stelle, Datensicherheit"
-    },
-    "winning": {
-      "title": "Winning",
-      "text": "Unternehmergeist, Großes und mutiges Denken, Durchsetzungsfähigkeit, Belastbarkeit"
-    },
     "hideJobs": "Jobs verbergen"
   },
 
@@ -67,22 +51,6 @@
       "department": {
         "all": "All"
       }
-    },
-    "agile": {
-      "title": "Agile",
-      "text": "Curiosity, Out of the box thinking, Fast delivery, Continuous improvement"
-    },
-    "oneTeam": {
-      "title": "One Team",
-      "text": "Openness, Ownership, Respect, Enthusiasm"
-    },
-    "dataDriven": {
-      "title": "Data driven",
-      "text": "Analytics, Create insights, Consumer first, Data security"
-    },
-    "winning": {
-      "title": "Winning",
-      "text": "Entrepreneurship, Think big & bold, Assertivness, Resilience"
     },
     "hideJobs": "Hide jobs"
   }
