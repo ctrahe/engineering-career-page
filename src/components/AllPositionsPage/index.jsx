@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import SocialMedia from '../SocialMedia'
 import Page from '../Page';
 import Cover from '../Cover';
-import WorkingAtScout from '../../sharedComponents/WorkingAtScout';
 import './allPositions.css';
 import {Translate} from 'react-i18nify';
 
@@ -89,7 +88,6 @@ class AllPositions extends React.Component {
             </div>
           </div>
           <div className="grid-item one-whole">
-            <WorkingAtScout />
             <SocialMedia/>
           </div>
         </div>
