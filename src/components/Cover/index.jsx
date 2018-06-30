@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import './cover.css';
-import video from './../../videos/CareerPageVideo-cover.mp4';
-import VideoImage from '../../images/video_image.webp';
 
 class Cover extends Component {
 
@@ -33,18 +31,7 @@ class Cover extends Component {
   }
 
   renderCoverBackground() {
-      if (this.props.background === 'video') {
-        return  <div>
-                  <img src={VideoImage} alt="Scout24 Video" className="desk-hide lap-hide video-image"/>
-                  <video autoPlay loop muted className="palm-hide cover-video">
-                    <source src={video}  type="video/mp4"/>
-                  </video>
-                </div>;
-      }
-      else {
-        return  <div className={(this.props.background === 'cover' ? 'general-image cover-image' : this.props.departmentImage + ' cover-image')}/>;
-
-      }
+    return  <div className={(this.props.background === 'cover' ? 'general-image cover-image' : this.props.departmentImage + ' cover-image')}/>;
   }
 }
 
