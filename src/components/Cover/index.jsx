@@ -20,6 +20,7 @@ class Cover extends Component {
     return (
       <div className="grid-item one-whole cover-wrapper">
         {background}
+        <span className="img-source">Bildquelle: officedropin.com</span>
         <div className="absolute-container grid-item one-whole">
           <div className="cover-phrase">
             {this.props.phrase}
