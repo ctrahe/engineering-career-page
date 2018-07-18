@@ -1,5 +1,5 @@
-AWSTemplateFormatVersion: '2010-09-09'
-Description: ''
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "scout24 job board bucket"
 Parameters:
   domainName:
     Type: String
@@ -23,11 +23,11 @@ Resources:
         - Action:
           - s3:GetObject
           Effect: Allow
-          Principal: '*'
+          Principal: "*"
           Resource:
           - Fn::Sub: arn:aws:s3:::${bucket}/*
           Sid: PublicReadGetObject
-        Version: '2012-10-17'
+        Version: "2012-10-17"
 
   allowReadAccessToCompanyIP:
     Type: AWS::S3::BucketPolicy
@@ -35,7 +35,7 @@ Resources:
       Bucket: !Ref bucket
       PolicyDocument:
         Id: allowAccess
-        Version: '2012-10-17'
+        Version: "2012-10-17"
         Statement:
         - Sid: "allowOffice"
           Action:
