@@ -1,9 +1,0 @@
-region: eu-west-1
-tags:
-  segment: people
-  usecase: job-board
-stacks:
-  job-board-website:
-    template-url: templates/s3-bucket.yml
-    parameters:
-      domainName: job-board.scout24.com
