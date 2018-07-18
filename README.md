@@ -14,11 +14,19 @@ You can find the most recent version of this guide [here](https://github.com/fac
 3. run npm start
 
 ## Deployment
+
+### Website
 Using [Teamcity](https://teamcity.rz.is/project.html?projectId=EngineeringCareerPage)
  the files are build to a static web application, which is hosted on S3.
+ 
+### Infrastructure
+- Login to `s24-job-board` with PowerUserAccess using [scloud](https://docs.cloud.scout24.com/aws-accounts_cli-access.html)
+- Deploy the s3 bucket manually using the awscli
+```
+aws cloudformation deploy --region eu-west-1 --stack-name job-board-bucket --template-file infrastructure/templates/s3-bucket.yml --parameter-overrides domainName=job-board.scout24.com
+```
  
 ## Dependencies
 
 Current job openings are requested from the Greenhouse API for Scout24.
- 
  
