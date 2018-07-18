@@ -9,7 +9,7 @@ Resources:
   bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: "|Ref|domainName"
+      BucketName: !Ref domainName
       WebsiteConfiguration:
         ErrorDocument: index.html
         IndexDocument: index.html
