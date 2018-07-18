@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: ''
+Parameters:
+  RoleName:
+    Type: String
+    Description: role name
+    Default:  deploy-job-board
+
+Resources:
+  IAMRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Ref RoleName
+      AssumeRolePolicyDocument:
+        Statement:
+        - Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::202084488265:role/rz_tuvbui'
+          Action: 'sts:AssumeRole'
+      Policies:
+      - PolicyName: allow-s3
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            - s3:PutObject
+            - s3:GetObject
+            - s3:ListBucket
+            - s3:ListAllMyBuckets
+            - s3:PutBucketPolicy
+            Resource: !Sub "arn:aws:s3:::*"
+      - PolicyName: allow-cf
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            -  acm:ListCertificates  
+            -  cloudfront:CreateDistribution 
+            -  cloudfront:DeleteDistribution 
+            -  cloudfront:GetDistribution 
+            -  cloudfront:GetDistributionConfig 
+            -  cloudfront:ListDistributions 
+            -  cloudfront:UpdateDistribution 
+            -  cloudfront:ListCloudFrontOriginAccessIdentities 
+            -  elasticloadbalancing:DescribeLoadBalancers 
+            -  iam:ListServerCertificates 
+            -  sns:ListSubscriptionsByTopic 
+            -  sns:ListTopics 
+            -  waf:GetWebACL 
+            -  waf:ListWebACLs 
+            Resource: "*"
