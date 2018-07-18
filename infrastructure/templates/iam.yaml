@@ -18,16 +18,30 @@ Resources:
             AWS: 'arn:aws:iam::202084488265:role/rz_tuvbui'
           Action: 'sts:AssumeRole'
       Policies:
+      - PolicyName: allow
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            - cloudformation:DescribeStacks
+            - cloudformation:CreateStack
+            - cloudformation:UpdateStack
+            - cloudformation:DescribeStackEvents
+            Resource: "*"
       - PolicyName: allow-s3
         PolicyDocument:
           Statement:
           - Effect: Allow
             Action:
+            - s3:CreateBucket
+            - s3:DeleteBucket
             - s3:PutObject
             - s3:GetObject
             - s3:ListBucket
             - s3:ListAllMyBuckets
             - s3:PutBucketPolicy
+            - s3:PutBucketWebsite
+            - s3:GetObjectVersion
             Resource: !Sub "arn:aws:s3:::*"
       - PolicyName: allow-cf
         PolicyDocument:
